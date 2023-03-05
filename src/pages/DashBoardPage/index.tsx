@@ -1,8 +1,9 @@
 import React from "react";
+import { TitleStyle } from "./style";
 
 const DashBoardPage = () => {  
   return (
-    <h1>Dash</h1>
+    <TitleStyle>Dash</TitleStyle>
   )
 };
 
