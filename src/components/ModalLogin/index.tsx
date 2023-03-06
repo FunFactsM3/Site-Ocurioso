@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { StyledDiv } from './style';
 
 interface ModalProps {
   title: string;
@@ -25,7 +26,7 @@ export const ModalLogin: React.FC<ModalProps> = ({ title, isOpen, onClose, child
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
-    <div className={'modal'}>
+    <StyledDiv>
       <div
         ref={outsideRef}
         className={'modal__overlay'}
@@ -44,7 +45,7 @@ export const ModalLogin: React.FC<ModalProps> = ({ title, isOpen, onClose, child
           { children }
         </div>
       </div>
-    </div>
+    </StyledDiv>
     </motion.div>
 </div>
 

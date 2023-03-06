@@ -4,19 +4,6 @@ import styled from "styled-components";
 export const modalLoginStyled = styled.div`
 
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .modal__overlay {
   position: absolute;
   top: 0;
@@ -59,5 +46,17 @@ export const modalLoginStyled = styled.div`
 
 .modal__content {
   font-size: 1.25rem;
-
+}
+`
+export const StyledDiv = styled.div`
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
 `
