@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Turn as Hamburger } from "hamburger-react";
+import { ModalContext } from "../../providers/ModalContext";
 
 const DashBoardPage = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const {menuOpen, setMenuOpen} = useContext(ModalContext);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
