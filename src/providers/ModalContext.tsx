@@ -15,3 +15,4 @@ export const ModalProviders = ({ children }:IChildren) =>{
     </ModalContext.Provider> 
   );
 }
+  
