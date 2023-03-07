@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-     baseURL: "https://hamburgueria-kenzie-v2.herokuapp.com/",
+     baseURL: "http://localhost:3001/",
      timeout: 7000,
 })
 
