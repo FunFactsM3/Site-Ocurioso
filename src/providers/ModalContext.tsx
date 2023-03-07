@@ -5,8 +5,9 @@ import { IChildren, IModalContext } from "./types/type";
 
 export const ModalContext = createContext({} as IModalContext);
 
-export const MOdalProviders = ({ children }:IChildren) =>{
+export const ModalProviders = ({ children }:IChildren) =>{
   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   return (
     <ModalContext.Provider value={{menuOpen, setMenuOpen}}>
@@ -14,3 +15,4 @@ export const MOdalProviders = ({ children }:IChildren) =>{
     </ModalContext.Provider> 
   );
 }
+  
