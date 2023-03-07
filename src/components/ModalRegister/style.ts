@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const modalLoginStyled = styled.div``;
+export const modalLoginStyled = styled.div`
+
+`
 export const StyledDivModal = styled.div`
   position: fixed;
   top: 0;
@@ -18,8 +20,8 @@ export const StyledDivModal = styled.div`
     right:43%;
     bottom:4%;
   }
-`;
-export const StyledDivModalBox = styled.div`
+`
+export const StyledModalBox = styled.div`
   position: relative;
   padding: 1rem;
   background-color: white;
@@ -31,28 +33,28 @@ export const StyledDivModalBox = styled.div`
   overflow: auto;
   width: 792px;
   height: 440px;
-  background: #f6f5f4;
-`;
-export const StyledDivModalOverlay = styled.div`
+  `
+export const StyledModalOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
-`;
-export const StyledButtonClose = styled.button`
+  `
+export const StyledModalClose = styled.button`
   position: absolute;
   top: 0.5rem;
-  color: black;
+  color:black;
   right: 0.5rem;
   padding: 0.5rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.25rem;
-`;
-export const StyledDivModalTittle = styled.div`
+  
+  `
+export const StyledModalTittle = styled.div`
     width: 66px;
     height: 26px;
     font-family: "Open Sans";
@@ -63,8 +65,8 @@ export const StyledDivModalTittle = styled.div`
     color: rgb(44, 35, 86);
     margin-left: 75%;
     padding-top: 40px;
-`;
-export const StyledDivModalContent = styled.div`
-    font-size: 1.25rem;
-    margin-top: 50px;
-`;
+  `
+export const StyledModalContent = styled.div`
+   margin-top:50px;
+   font-size: 1.25rem;
+`

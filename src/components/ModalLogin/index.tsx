@@ -1,53 +1,62 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import { StyledDiv } from './style';
+import {
+  StyledDivModal,
+  StyledDivModalOverlay,
+  StyledDivModalBox,
+  StyledButtonClose,
+  StyledDivModalTittle,
+  StyledDivModalContent,
+} from "./style";
+import Index from "../Header/FormLogin";
 
 interface ModalProps {
   title: string;
   isOpen: boolean;
   onClose: () => void;
-  children:string;
+  children: string;
 }
 
-export const ModalLogin: React.FC<ModalProps> = ({ title, isOpen, onClose, children }) => {
+export const ModalLogin: React.FC<ModalProps> = ({
+  title,
+  isOpen,
+  onClose,
+  children,
+}) => {
   const outsideRef = React.useRef(null);
 
-  const handleCloseOnOverlay = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+  const handleCloseOnOverlay = (
+    e: React.MouseEvent<HTMLElement, MouseEvent>
+  ) => {
     if (e.target === outsideRef.current) {
       onClose();
     }
-  }
+  };
 
   return isOpen ? (
-<div>
+    <div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
-    <StyledDiv>
-      <div
-        ref={outsideRef}
-        className={'modal__overlay'}
-        onClick={handleCloseOnOverlay}
-      />
-      <div className={'modal__box'}>
-        <button
-          className={'modal__close'}
-          onClick={onClose}
-        >X
-        </button>
-        <div className={'modal__title'}>
-          {title}
-        </div>
-        <div className={'modal__content'}>
-          { children }
-        </div>
-      </div>
-    </StyledDiv>
-    </motion.div>
-</div>
-
+        <StyledDivModal>
+          <StyledDivModalOverlay
+            ref={outsideRef}
+            onClick={handleCloseOnOverlay}
+          />
+          <StyledDivModalBox>
+            <StyledDivModalTittle>{title}</StyledDivModalTittle>
+            <img src="src/assets/spaceImage.png" alt="" />
+            <StyledButtonClose onClick={onClose}>X</StyledButtonClose>
+            <StyledDivModalContent>
+              {children}
+              <Index />
+            </StyledDivModalContent>
+          </StyledDivModalBox>
+        </StyledDivModal>
+      </motion.div>
+    </div>
   ) : null;
 };

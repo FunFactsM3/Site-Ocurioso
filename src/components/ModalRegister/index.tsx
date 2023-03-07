@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { StyledDivModal,StyledModalOverlay,StyledModalBox,StyledModalClose,StyledModalTittle,StyledModalContent } from "./style";
+import IndexRegister from "../Header/FormRegister";
 
 interface ModalProps {
   title: string;
@@ -26,27 +28,32 @@ export const ModalRegister: React.FC<ModalProps> = ({
 
   return isOpen ? (
     <div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className={"modal-register"}>
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+        <StyledDivModal>
+          <StyledModalOverlay
             ref={outsideRef}
-            className={"modal__overlay-register"}
             onClick={handleCloseOnOverlay}
           />
-          <div className={"modal__box-register"}>
-            <button className={"modal__close-register"} onClick={onClose}>
-              X
-            </button>
-            <div className={"modal__title-register"}>{title}</div>
-            <div className={"modal__content-register"}>{children}</div>
-          </div>
-        </div>
-      </motion.div>
+          <StyledModalBox>
+            <StyledModalTittle>{title}</StyledModalTittle>
+            <StyledModalClose
+              onClick={onClose}
+            >X
+            </StyledModalClose>
+            <img src="src/assets/spaceImage.png" alt=""/>
+            <StyledModalContent>
+              { children }
+              <IndexRegister/>
+            </StyledModalContent>
+          </StyledModalBox>
+        </StyledDivModal>
+        </motion.div>
     </div>
-  ) : null;
-};
+    
+      ) : null;
+    };
