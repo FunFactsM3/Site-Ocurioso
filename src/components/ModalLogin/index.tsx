@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import {
   StyledDivModal,
@@ -8,7 +8,8 @@ import {
   StyledDivModalTittle,
   StyledDivModalContent,
 } from "./style";
-import Index from "../Header/FormLogin";
+import Index from "../Forms/FormLogin";
+import { ModalContext } from "../../providers/ModalContext";
 
 interface ModalProps {
   title: string;
@@ -17,29 +18,17 @@ interface ModalProps {
   children: string;
 }
 
-export const ModalLogin: React.FC<ModalProps> = ({
-  title,
-  isOpen,
-  onClose,
-  children,
-}) => {
+export const ModalLogin: React.FC<ModalProps> = ({ title, children}) => {
+  const {handleCloseOnOverlay, toggleModalLogin,  isModalLoginOpen} = useContext(ModalContext);
   const outsideRef = React.useRef(null);
 
-  const handleCloseOnOverlay = (
-    e: React.MouseEvent<HTMLElement, MouseEvent>
-  ) => {
-    if (e.target === outsideRef.current) {
-      onClose();
-    }
-  };
-
-  return isOpen ? (
+  return isModalLoginOpen ? (
     <div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0. }}
       >
         <StyledDivModal>
           <StyledDivModalOverlay
@@ -49,7 +38,7 @@ export const ModalLogin: React.FC<ModalProps> = ({
           <StyledDivModalBox>
             <StyledDivModalTittle>{title}</StyledDivModalTittle>
             <img src="src/assets/spaceImage.png" alt="" />
-            <StyledButtonClose onClick={onClose}>X</StyledButtonClose>
+            <StyledButtonClose onClick={toggleModalLogin}>X</StyledButtonClose>
             <StyledDivModalContent>
               {children}
               <Index />
