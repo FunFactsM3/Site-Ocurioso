@@ -13,6 +13,7 @@ export const HeaderHomePageStyled = styled.header`
   p {
     color: #f6f5f4;
     padding: 0 1.5rem 0 0;
+    cursor: pointer;
   }
 
   nav {

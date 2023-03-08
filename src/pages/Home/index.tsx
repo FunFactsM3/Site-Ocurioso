@@ -6,6 +6,7 @@ import { GlobalStyles } from "../../styles/global";
 import { HomePageStyled } from "./style";
 import { SearchHome } from "../../components/SearchHome";
 import { MainHome } from "../../components/MainHome";
+import { FooterHome } from "../../components/FooterHome";
 
 const DashBoardPage = () => {
   return (
@@ -15,6 +16,7 @@ const DashBoardPage = () => {
         <HeaderHome />
         <SearchHome />
         <MainHome />
+        <FooterHome />
       </HomePageStyled>
     </>
   );

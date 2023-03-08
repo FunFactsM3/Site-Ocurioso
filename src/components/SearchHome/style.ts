@@ -3,9 +3,13 @@ import styled from "styled-components";
 export const SearchHomePageStyled = styled.nav`
   display: flex;
   align-items: center;
+
   background-color: #f6f5f4;
+
   border-radius: 20px;
-  margin: 1rem;
+
+  margin: 3rem 1rem;
+
   font-family: "Montserrat", sans-serif;
   input {
     height: 40px;
@@ -15,12 +19,6 @@ export const SearchHomePageStyled = styled.nav`
 
     border: 1px solid #757575;
     border-radius: 12px;
-
-    @media (min-width: 1023) {
-      input {
-        width: 90%;
-      }
-    }
   }
 
   input:focus {
@@ -28,6 +26,12 @@ export const SearchHomePageStyled = styled.nav`
     border: 1px solid #757575;
     border-radius: 12px;
     outline: 0;
+  }
+
+  @media (min-width: 1400px) {
+    input {
+      width: 80%;
+    }
   }
 `;
 
@@ -43,8 +47,9 @@ export const ImgSearchStyled = styled.img`
   border-radius: 14px;
   cursor: pointer;
 
-  @media (min-width: 1023) {
-    padding: 12px 30px;
+  @media (min-width: 1023px) {
+    padding: 10px 28px;
+    margin: 0 0 0 1rem;
   }
 `;
 
@@ -54,4 +59,9 @@ export const ImgMicStyled = styled.img`
   margin: 0 5px 0 5px;
   border-radius: 14px;
   cursor: pointer;
+
+  @media (min-width: 1023px) {
+    padding: 10px 28px;
+    margin: 0 0 0 1rem;
+  }
 `;

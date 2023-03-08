@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardHomePageStyled = styled.li`
   width: 380px;
   max-width: 90%;
-  height: 450px;
+  height: 480px;
 
   background-color: #f6f5f4;
 
@@ -16,16 +16,18 @@ export const CardHomePageStyled = styled.li`
     border-bottom: 1px solid #e0e0e0;
     margin: 1rem;
     font-size: 26px;
+    padding: 0 0 1rem 0;
   }
 
   p {
     color: #757575;
-    margin: 1rem;
+    margin: 1rem 1rem 3rem 1rem;
   }
 
   div {
     margin: 1rem;
     align-items: center;
+
     span {
       color: #f6f5f4;
       background-color: #82d74d;
