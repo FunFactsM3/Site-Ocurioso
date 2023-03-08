@@ -1,9 +1,9 @@
 import React from "react";
 
-const RegisterPage = () => {  
+const FavoritePage = () => {  
   return (
     <h1>Register</h1>
   )
 };
 
-export default RegisterPage
+export default FavoritePage;
