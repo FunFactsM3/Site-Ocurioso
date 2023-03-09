@@ -11,12 +11,10 @@ export const FormLoginStyle = styled.form`
     justify-content: center;
 
     position: relative;
-    h1{
+    h1 {
       font-family: 'Open Sans', sans-serif;
-      color: #2C2356;
-
+      color: var(--primary-grey-dark);
     }
-
 `;
 
 export const StyledDivPassword = styled.div`
@@ -33,13 +31,13 @@ export const StyledDivPassword = styled.div`
 export const StyledButtonLogin = styled.button`
   width: 240px;
   height: 36px;
-  background: #82d74d;
+  background: var(--primary-green);
   border-radius: 12px;
   display:flex;
   align-items:center;
   justify-content: center;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
+  color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
   font-weight: 700;
@@ -55,7 +53,7 @@ export const StyledSpanDescription = styled.span`
   font-size: 14px;
   line-height: 100%;
   letter-spacing: -0.04em;
-  color: #757575;
+  color: var(--primary-grey-dark);
   flex: none;
   text-align: center;
 `;
@@ -63,13 +61,13 @@ export const StyledSpanDescription = styled.span`
 export const StyledButtonRegister = styled.button`
   width: 240px;
   height: 36px;
-  background: #E9425A;
+  background: var(--primary-red);
   border-radius: 12px;
   display:flex;
   align-items:center;
   justify-content: center;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
+  color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
   font-weight: 700;
@@ -79,4 +77,3 @@ export const StyledButtonRegister = styled.button`
 export const TextLink = styled(Link)`
   text-decoration: none;
 `
-

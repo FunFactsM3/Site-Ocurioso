@@ -4,9 +4,7 @@ import styled from "styled-components";
 export const SearchFormStyledRegister = styled.form`
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     padding: 0px;
     gap: 7px;
@@ -17,8 +15,8 @@ export const SearchFormStyledRegister = styled.form`
 export const StyledInputName = styled.input`
     width: 240px;
     height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-radius: 10px;
     border-top:none;
     border-left:none;
@@ -29,8 +27,8 @@ export const StyledInputName = styled.input`
 export const StyledInputEmail = styled.input`
     width: 240px;
     height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-radius: 10px;
     border-top:none;
     border-left:none;
@@ -40,8 +38,8 @@ export const StyledInputEmail = styled.input`
 export const StyledInputPass = styled.input`
     width: 240px;
     height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-radius: 10px;
     border-top:none;
     border-left:none;
@@ -51,8 +49,8 @@ export const StyledInputPass = styled.input`
 export const StyledInputConfirmPass = styled.input`
     width: 240px;
     height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-radius: 10px;
     border-top:none;
     border-left:none;
@@ -67,8 +65,8 @@ export const StyledDivEmail = styled.div`
   input {
     width: 240px;
     height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-radius: 10px;
     border-top:none;
     border-left:none;
@@ -85,8 +83,8 @@ export const StyledDivPassword = styled.div`
     width: 240px;
     height: 40px;
     border-radius: 10px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #c3dce3;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--primary-grey-medium);
     border-top:none;
     border-left:none;
     border-right:none;
@@ -96,15 +94,13 @@ export const StyledDivPassword = styled.div`
 export const StyledButtonLogin = styled.div`
   width: 240px;
   height: 36px;
-  background: #82d74d;
+  background: var(--primary-green);
   border-radius: 12px;
   display:flex;
   align-items:center;
   justify-content: center;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 14px;
+  color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
 `;
@@ -118,7 +114,7 @@ export const StyledSpanDescription = styled.span`
   font-size: 14px;
   line-height: 100%;
   letter-spacing: -0.04em;
-  color: #757575;
+  color: var(--primary-grey-dark);
   flex: none;
   text-align: center;
 `;
@@ -126,13 +122,13 @@ export const StyledSpanDescription = styled.span`
 export const StyledButtonRegister = styled.button`
   width: 240px;
   height: 36px;
-  background: #E9425A;
+  background:var(--primary-red);
   border-radius: 12px;
   display:flex;
   align-items:center;
   justify-content: center;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
+  color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
   font-weight: 700;

@@ -1,11 +1,10 @@
 import { TextField } from '@mui/material';
 import Input from '@mui/material/Input';
-
 import styled from 'styled-components';
 
 export const StyledTextField = styled(TextField)`
   width: 100%; 
-  background-color: #fff;
+  background-color: var(--white-color);
   box-shadow: 0 22px 45.8px -11.45px #34292742;
 
   input {
@@ -13,12 +12,12 @@ export const StyledTextField = styled(TextField)`
     height: 20px;  width: 100%; 
     border-radius: 10px;
     border: none;
-    background-color: #fff;
+    background-color: var(--white-color);
   }
   
   label {
     &.Mui-focused {
-      color:  rgba(117, 117, 117, 1);
+      color:  var(--primary-grey-dark);
     }
   }
 
@@ -34,23 +33,23 @@ export const StyleInputPassword = styled(Input)`
   width: 100%; height: 50px;
   padding-left: 10px;
 
-  background-color: #fff;
+  background-color: var(--white-color);
 
   box-shadow: 0 22px 45.8px -11.45px #34292742;
   border-radius: 10px;
  
   input {
-    color:  rgba(117, 117, 117, 1);
+    color: var(--primary-grey-dark);
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: #fff;
+    background-color: var(--white-color);
   
     height: 20px;
     border-radius: 10px;
   }
   input::placeholder{
-    color:  rgba(117, 117, 117, 1);
-    background-color: #fff;
+    color: var(--primary-grey-dark);
+    background-color: var(--white-color);
   }
  
   ::after{
@@ -59,5 +58,4 @@ export const StyleInputPassword = styled(Input)`
   ::before{
     border: none!important;
   }
-`
-
+`;

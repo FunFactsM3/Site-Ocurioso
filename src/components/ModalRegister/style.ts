@@ -10,7 +10,7 @@ export const WrapperStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:var(--background-color-modal);
 
   /* img{
     position:absolute;
