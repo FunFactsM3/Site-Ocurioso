@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const SearchFormStyledRegister = styled.div`
+export const SearchFormStyledRegister = styled.form`
     display: flex;
     flex-direction: column;
     -webkit-box-pack: center;
@@ -24,6 +24,7 @@ export const StyledInputName = styled.input`
     border-left:none;
     border-right:none;
     padding-left:10px;
+    outline: none;
 `
 export const StyledInputEmail = styled.input`
     width: 240px;
