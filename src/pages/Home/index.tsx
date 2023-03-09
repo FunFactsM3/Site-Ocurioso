@@ -7,6 +7,7 @@ import { HomePageStyled } from "./style";
 import { SearchHome } from "../../components/SearchHome";
 import { MainHome } from "../../components/MainHome";
 import { FooterHome } from "../../components/FooterHome";
+import { ModalHome } from "../../components/ModalHome";
 
 const DashBoardPage = () => {
   return (
@@ -17,6 +18,7 @@ const DashBoardPage = () => {
         <SearchHome />
         <MainHome />
         <FooterHome />
+        <ModalHome />
       </HomePageStyled>
     </>
   );

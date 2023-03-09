@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CardHomePageStyled = styled.li`
   width: 380px;
   max-width: 90%;
+  min-width: 280px;
   height: 480px;
 
   background-color: #f6f5f4;
@@ -11,6 +12,8 @@ export const CardHomePageStyled = styled.li`
 
   align-items: center;
   justify-content: center;
+
+  margin: 0 1rem 1rem 0;
 
   h3 {
     border-bottom: 1px solid #e0e0e0;
@@ -33,7 +36,7 @@ export const CardHomePageStyled = styled.li`
       background-color: #82d74d;
       padding: 5px 10px;
       border-radius: 100px;
-      margin: 1rem 1rem 0 0;
+      margin: 1rem 3rem 0 0;
     }
     img {
       margin: -7px;
@@ -43,4 +46,5 @@ export const CardHomePageStyled = styled.li`
 
 export const IMGCardHomePageStyled = styled.img`
   width: 100%;
+  cursor: pointer;
 `;

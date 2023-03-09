@@ -1,12 +1,12 @@
-export interface IChildren{
+export interface IChildren {
   children: React.ReactNode;
 }
 
-export interface IUserContext{
+export interface IUserContext {
   user: string | null;
 }
 
-export interface IModalContext{
+export interface IModalContext {
   menuOpen: boolean;
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isModalRegisterOpen: boolean;
@@ -14,6 +14,8 @@ export interface IModalContext{
   handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   toggleModalRegister: () => void;
   toggleModalLogin: () => void;
+  openModalDash: boolean;
+  setModalDash: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ModalProps {
@@ -22,4 +24,3 @@ export interface ModalProps {
   onClose: () => void;
   children: string;
 }
-
