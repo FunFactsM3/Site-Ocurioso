@@ -1,34 +1,22 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const SearchFormStyledLogin = styled.div`
- display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 0px;
+export const FormLoginStyle = styled.form`
+    width: 90%; height: 75%;
+
     gap: 18px;
-    max-width: 100%;
-    margin-left: 60%;
-`;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
-export const StyledDivEmail = styled.div`
-  input::placeholder {
-    padding-left: 10px;
-  }
+    position: relative;
+    h1{
+      font-family: 'Open Sans', sans-serif;
+      color: #2C2356;
 
-  input {
-    width: 240px;
-    height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #c3dce3;
-    border-radius: 10px;
-    border-top:none;
-    border-left:none;
-    border-right:none;
-  }
+    }
+
 `;
 
 export const StyledDivPassword = styled.div`
@@ -39,16 +27,10 @@ export const StyledDivPassword = styled.div`
   input {
     width: 240px;
     height: 40px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #c3dce3;
-    border-top:none;
-    border-left:none;
-    border-right:none;
   }
 `;
 
-export const StyledButtonLogin = styled.div`
+export const StyledButtonLogin = styled.button`
   width: 240px;
   height: 36px;
   background: #82d74d;
@@ -94,7 +76,7 @@ export const StyledButtonRegister = styled.button`
   font-size: 14px;
   border:none;
 `
-  export const TextLink = styled(Link)`
+export const TextLink = styled(Link)`
   text-decoration: none;
 `
 

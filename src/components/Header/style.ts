@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 interface IStyledParagraphProps {
   background?: string;
   color?: string;
@@ -9,36 +10,35 @@ interface IStyledParagraphProps {
   textAlign?: 'center' | 'left' | 'right';
 }
 
-export const HeaderStyled = styled.div`
-height:70px;
-border-bottom: 1px solid #C3DCE3;
-display:flex;
-align-items:center;
-justify-content:space-evenly;
-gap:40%;
-`
-export const StyledButtonsSection = styled.button<IStyledParagraphProps>`
-  display:flex;
-  background:none;
-  margin-right: 7%;
-  align-items:center;
+export const HeaderStyled = styled.header`
+  width: 100vw; height: 10vh;
+  padding: 0 10px;
 
-  ${({ gap }) => {
-      switch (gap) {
-        case 'yes':
-          return css`
-            gap:10%;
-          `;
-        default:
-          return css`
-            gap: none;
-          `;
-      }
-    }}
-`
-export const SyledDescriptionDiv = styled.div`
-margin: 14% 0px 0px 5%;
-`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  border-bottom: 1px solid #ffff;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    img{
+      padding-right: 50%;
+    }
+  }
+`;
+export const HeaderFormStyle= styled.div`
+  width: 100%; height: 10%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
 export const StyledButtonLogin = styled.button<IStyledParagraphProps>`
   background:none;
 
@@ -102,7 +102,14 @@ export const StyledButtonRegister = styled.button<IStyledParagraphProps>`
 
 
 `;
+export const StyledModalClose = styled.button`
+  background-color: transparent;
+  color:black;
 
-export const StyledTitleH1 = styled.h1`
-margin-left:40%;
-`
+  font-size: 20px;
+  font-weight: 100;
+
+  position: absolute;
+  right: 20px; 
+  cursor: pointer;
+`;
