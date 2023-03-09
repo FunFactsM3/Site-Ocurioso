@@ -22,9 +22,9 @@ const LoginPage = () => {
           <MainStyle>
             <TextParagraphStyle>VOCÊ SABIA?</TextParagraphStyle>
             <TextTitleStyle type="h1">Aqui tem as curiosidades mais legais do mundo </TextTitleStyle>
-            <TextTitleStyle type="h2">Você descobre tudo sobre ciência e o mundo de um jeito divertido.  É só pesquisar a sua curiosidade e pronto! Ah, ainda dá pra salvar o que você pesquisou pra ver depois </TextTitleStyle>
+            <TextTitleStyle type="h2">Você dscobre tudo sobre ciência e o mundo de um jeito divertido.  É só pesquisar a sua curiosidade e pronto! Ah, ainda dá pra salvar o que você pesquisou pra ver depois </TextTitleStyle>
             <SpaceButtonsStyle>
-              <ButtonOpenModalLogin text="entrar" color="blue" toglle={toggleModalLogin}/>
+              <ButtonOpenModalLogin text="Entre aqui" color="blue" toglle={toggleModalLogin}/>
               <ButtonOpenModalRegister text={`Cadastre-se`} color="green" toglle={toggleModalRegister}/>
             </SpaceButtonsStyle>
           </MainStyle>

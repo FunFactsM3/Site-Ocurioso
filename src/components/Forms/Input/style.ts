@@ -21,7 +21,6 @@ export const StyledTextField = styled(TextField)`
       color:  rgba(117, 117, 117, 1);
     }
   }
-
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root::before{
     border: none!important;
   }
@@ -30,6 +29,14 @@ export const StyledTextField = styled(TextField)`
   }
 `;
 
+export const ParagraphErrorStyle = styled.p`
+  color: #E9425A;
+  align-self: flex-start;
+  font-family:"Open Sans";
+  font-size: 0.62rem;
+  font-weight: 400;
+  line-height: 14px;
+`
 export const StyleInputPassword = styled(Input)`
   width: 100%; height: 50px;
   padding-left: 10px;

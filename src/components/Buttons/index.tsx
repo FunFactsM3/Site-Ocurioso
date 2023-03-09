@@ -9,7 +9,6 @@ interface IButton{
   toglle?:() => void;
 }
 
-
 //TODO: passar para o types, esses botões são para abrir o modal
 export const ButtonCloseModal = ({toglle, text}:IButton) => (
   <ButtonModalCloseStyled onClick={toglle} >{text}</ButtonModalCloseStyled>
@@ -27,8 +26,7 @@ export const ButtonOpenModalLogin = ({text,color,toglle}:IButton) => (
 </>
 )
 
-export const ButtonOpenModalRegister = ({text,color,toglle}:IButton) => {
-  return (
+export const ButtonOpenModalRegister = ({text,color,toglle}:IButton) => (
     <>
       {
         text.match("Cadastre-se")
@@ -37,7 +35,6 @@ export const ButtonOpenModalRegister = ({text,color,toglle}:IButton) => {
       }
   </>
 )
-}
 
 export const ButtonLogin = ({text,color,toglle}:IButton) => (
   <ButtonLoginStyled color={color} onClick={toglle}>{text}</ButtonLoginStyled>

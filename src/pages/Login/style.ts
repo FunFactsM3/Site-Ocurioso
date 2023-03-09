@@ -4,14 +4,18 @@ interface IStyle{
   type: string;
 }
 export const LoginPageStyled = styled.div`
-  /* background: url('/src/assets/background.png') no-repeat center center fixed; */
-  background: url('/src/assets/background.png') no-repeat  fixed;
+
+  background-image: url("/src/assets/background.png");
+  background-position-y: -25px;
+  background-position-x: -25px;
   background-size: cover;
   height: 100vh;
 
   @media screen and (min-width: 1000px) {
    background-image: url("/src/assets/background.png");
+   background-size: 100%;
    background-position-y: -115px;
+   background-position-x: 5px;
   }
 `;
 
@@ -24,10 +28,13 @@ export const DivStyle = styled.div`
   justify-content: center;
 
   position: relative;
+  @media screen and (min-width: 1000px){
+    padding: 100px 0px 0px 0px;
+  }
 `
 
 export const MainStyle = styled.main`
-  width: 90%; height:55%;
+  width: 90%; height:65%;
 
   gap: 5px;
   display: flex;
@@ -36,11 +43,12 @@ export const MainStyle = styled.main`
 
   position: relative;
 
+
   @media screen and (min-width: 1000px) {
-    width: 500px; height:300px;
+    width: 500px; height: 400px;
     margin: 0 0 0 100px;
 
-    gap: 20px;
+    gap: 25px;
     display: flex;
     align-self: flex-start;
     justify-content: center;
@@ -86,12 +94,12 @@ export const TextTitleStyle = styled.p<IStyle>`
   }}
 `
 export const SpaceButtonsStyle = styled.span`
-  width: 50%; height: 50px;
+  width: auto; height: 50px;
 
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
 
   @media screen and (min-width: 1000px) {
     width: 55%; height: 50px;

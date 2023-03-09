@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 export const ButtonCloseStyled = styled.button`
   width: auto; height: 36px;
-  padding: 10px 19px;
+  padding: 10px 8px;
 
   border-radius: 12px;
 
@@ -15,6 +15,11 @@ export const ButtonCloseStyled = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (min-width: 1000px) {
+    width: auto; height: 40px;
+    padding: 10px 15px;
+  }
 
   ${({color}) => {
   switch (color) {
@@ -32,8 +37,7 @@ export const ButtonCloseStyled = styled.button`
 }}`;
 
 export const ButtonOpenStyled = styled.button`
-  width: auto;
-  height: 36px;
+  width: auto; height: 36px;
   margin-right: 20px;
 
   background: none;
@@ -68,6 +72,10 @@ export const ButtonLoginStyled = styled.button`
   font-size: 14px;
   background-color: #82D74D;
   color: rgb(255, 255, 255);
+
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
 `;
 
 export const ButtonRegisterStyled = styled.button`
@@ -77,6 +85,10 @@ export const ButtonRegisterStyled = styled.button`
   font-size: 14px;
   background-color: rgb(233, 66, 90);
   color: rgb(255, 255, 255);
+
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
 `;
 
 export const ButtonModalCloseStyled = styled.button`
@@ -88,7 +100,14 @@ export const ButtonModalCloseStyled = styled.button`
   font-size: 20px;
   font-weight: 100;
 
+  z-index: 1;
   position: absolute;
-  right: 0; top: -10px;
+  right: 15px; top: 10px;
   cursor: pointer;
+
+  @media screen and (min-width: 1000px) {
+    position: absolute;
+
+    right: 15px; top: 10px;
+  }
 `

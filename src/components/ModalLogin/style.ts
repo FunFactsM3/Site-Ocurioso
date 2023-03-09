@@ -22,6 +22,9 @@ export const ModalAsideStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  position: relative;
+  
   @media screen and (min-width: 1000px) {
     padding: 20px 10px;
   }
@@ -34,6 +37,8 @@ export const ImageStyle = styled.div`
 
   display: none;
   @media screen and (min-width: 1000px) {
+    width: 50%; height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +48,7 @@ export const ImageStyle = styled.div`
    }
   }
 `
-export const FormStyle = styled.form`
+export const FormStyle = styled.div`
   width: 100%; height: 100%;
   padding: 10px 0;
 
@@ -54,6 +59,7 @@ export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   @media screen and (min-width: 1000px) {
     width: 50%; height: 100%;
 

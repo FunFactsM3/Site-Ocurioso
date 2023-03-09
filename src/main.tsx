@@ -7,12 +7,17 @@ import { UserProviders } from './providers/UserContext'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-            <ModalProviders>
-              <UserProviders>
-                <BrowserRouter>
-                  <App />
-                </BrowserRouter>
-              </UserProviders>
-            </ModalProviders>
+<BrowserRouter>
+<ModalProviders>
+
+<UserProviders>
+
+<App />
+
+</UserProviders>
+</ModalProviders>
+
+</BrowserRouter>
+
   </React.StrictMode>,
 )
