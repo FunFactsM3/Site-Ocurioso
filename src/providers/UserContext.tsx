@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
-import { ModalContext } from "./ModalContext";
 
-import { IUserContext, IChildren, ILoginFormValues, IRegisterFormValues } from "./types/type";
+import { ModalContext } from "./ModalContext";
+import { IChildren, IUserContext } from "./types/Context";
+import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
+
 
 export const UserContext = createContext({} as IUserContext);
 
@@ -50,10 +52,10 @@ export const UserProviders = ({ children }:IChildren) =>{
     navigate('/');
   };
 
-
+  
   return (
     <UserContext.Provider 
-      value={{userLogin, userRegister}}>
+      value={{ userLogin, userRegister }}>
       {children}
     </UserContext.Provider>
   );

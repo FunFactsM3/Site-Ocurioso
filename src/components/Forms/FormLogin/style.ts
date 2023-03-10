@@ -11,11 +11,11 @@ export const FormLoginStyle = styled.form`
 
     position: relative;
 
-    background-color: ${({theme}) => theme.color.primaryGreyLight};
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
  
     h1{
       font-family: 'Open Sans', sans-serif;
-      color: ${({theme}) => theme.color.backgroundColor};
+      color: ${({theme}) => theme.color.backgroudnColorTitle};
     }
     @media screen and (min-width: 1000px) {
       width: 75%; height: auto;
@@ -30,7 +30,7 @@ export const StyledSpanDescription = styled.span`
   font-size: 14px;
   line-height: 100%;
   letter-spacing: -0.04em;
-  color: ${({theme}) => theme.color.primaryGreyDark};
+  color: ${({theme}) => theme.color.backgroudnColorTitle};
   flex: none;
   text-align: center;
 `;

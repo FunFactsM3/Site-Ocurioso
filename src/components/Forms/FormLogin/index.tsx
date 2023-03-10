@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-
 import { useForm } from "react-hook-form";
 
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -14,19 +13,12 @@ import { ButtonLogin, ButtonRegister } from "../../Buttons";
 
 import { UserContext } from "../../../providers/UserContext";
 import { ModalContext } from "../../../providers/ModalContext";
+import { Header, ILoginFormValues } from "../../../providers/types/Interface";
 
 import { schemaLogin } from "../../../validators/Validator";
 
 //TODO:passe todas interfaces para o types, tire h1 e coloque um styleComponents.
 
-export interface ILoginFormValues{
-  email: string;
-  password: string;
-}
-
-type Header = {
-  title: string;
-}
 
 const FormLogin = ({title}:Header) => {
   const { register, handleSubmit, formState: { errors }} = useForm<ILoginFormValues>({resolver: yupResolver(schemaLogin)});

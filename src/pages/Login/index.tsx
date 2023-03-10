@@ -13,6 +13,7 @@ import {  ButtonOpenModalLogin, ButtonOpenModalRegister } from "../../components
 
 const LoginPage = () => {
   const { toggleModalLogin, toggleModalRegister, isModalLoginOpen, isModalRegisterOpen} = useContext(ModalContext);
+  
   return (
     <>
       <GlobalStyles />

@@ -9,10 +9,14 @@ export const ButtonCloseStyled = styled.button`
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 14px;
+
+  transition: .5s ease-out;
+
   gap: 7px;
   display: flex;
   flex-direction: row;
   align-items: center;
+
 
   @media screen and (min-width: 1000px) {
     width: auto; height: 40px;
@@ -25,11 +29,19 @@ export const ButtonCloseStyled = styled.button`
         return css`
           background-color: ${({theme}) => theme.color.primaryGreen};
           color: ${({theme}) => theme.color.primaryGreyLight};
+
+          :hover{
+            background-color: ${({theme}) => theme.color.secondarybuttonhovergreen};
+          }
         `;
       default:
         return css`
           background-color: ${({theme}) => theme.color.primaryRed};
           color: ${({theme}) => theme.color.primaryGreyLight};
+          
+          :hover{
+            background-color: ${({theme}) => theme.color.secondarybuttonhoverred};
+          }
         `;
     }
   }}
@@ -38,14 +50,18 @@ export const ButtonCloseStyled = styled.button`
 export const ButtonOpenStyled = styled.button`
   width: auto; height: 36px;
   margin-right: 20px;
+
   background: none;
+
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 14px;
+
   gap: 7px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  
   ${({color}) => {
     switch (color) {
       case 'blue':
@@ -61,28 +77,41 @@ export const ButtonOpenStyled = styled.button`
 `;
 
 export const ButtonLoginStyled = styled.button`
-  width: 100%;
-  height: 36px;
+  width: 100%; height: 36px;
+
   border-radius: 12px;
+
   font-weight: 700;
   font-size: 14px;
+
+  transition: .5s ease-out;
+
   background-color: ${({theme}) => theme.color.primaryGreen};
   color: ${({theme}) => theme.color.primaryGreyLight};
 
+  :hover{
+    background-color: ${({theme}) => theme.color.secondarybuttonhovergreen};
+  }
   @media screen and (min-width: 1000px) {
-    width: 100%; height: 40px;
+    width: 100%; height: 40px; 
   }
 `;
 
 export const ButtonRegisterStyled = styled.button`
-  width: 100%;
-  height: 36px;
+  width: 100%; height: 36px;
+  
   border-radius: 12px;
+  
+  transition: .5s ease-out;
+
   font-weight: 700;
   font-size: 14px;
   background-color: ${({theme}) => theme.color.primaryRed};
   color: ${({theme}) => theme.color.primaryGreyLight};
 
+  :hover{
+    background-color: ${({theme}) => theme.color.secondarybuttonhoverred};
+  }
   @media screen and (min-width: 1000px) {
     width: 100%; height: 40px;
   }
