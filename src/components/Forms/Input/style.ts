@@ -49,10 +49,9 @@ export const ParagraphErrorStyle = styled.p`
 `
 export const StyleInputPassword = styled(Input)`
   width: 100%; height: 50px;
-  margin: 12px;
+
   border-radius: 10px;
 
-  /* border: 1px solid red; */
   input {
     width: 100%; height: 100%;
     padding: 0 10px;

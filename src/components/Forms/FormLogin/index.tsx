@@ -10,7 +10,7 @@ import { StyledSpanDescription } from "./style";
 import InputDefault from "../Input";
 import { InputPassword } from "../Input";
 
-import { ButtonCloseModal, ButtonLogin, ButtonRegister } from "../../Buttons";
+import { ButtonLogin, ButtonRegister } from "../../Buttons";
 
 import { UserContext } from "../../../providers/UserContext";
 import { ModalContext } from "../../../providers/ModalContext";

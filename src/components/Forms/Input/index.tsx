@@ -45,19 +45,17 @@ export const InputPassword = ({auto, error, register , placeholder}:IPassword) =
 
   return (
   <>
-  <StyleInputPassword autoComplete={auto} placeholder={placeholder}  id="standard-adornment-password" type={showPassword ? 'text' : 'password'} {...register} 
-    endAdornment={
-      <InputAdornment position="end">
-        <IconButton aria-label="toggle password visibility" onClick={handleClickShowPassword} onMouseDown={handleMouseDownPassword}>
-          {showPassword ? <VisibilityOff /> : <Visibility />}
-        </IconButton>
-      </InputAdornment>
-    } />
-    {
-    error 
-      ? <ParagraphErrorStyle>{error.message}</ParagraphErrorStyle>
-      : null
-    }
+    <StyleInputPassword autoComplete={auto} placeholder={placeholder}  id="standard-adornment-password" type={showPassword ? 'text' : 'password'} {...register} 
+      endAdornment={
+        <InputAdornment position="end">
+          <IconButton aria-label="toggle password visibility" onClick={handleClickShowPassword} onMouseDown={handleMouseDownPassword}>
+            {showPassword ? <VisibilityOff /> : <Visibility />}
+          </IconButton>
+        </InputAdornment>
+      } />
+    <ParagraphErrorStyle>
+    { error ? error.message  : null }   
+    </ParagraphErrorStyle> 
   </>
   )
 }

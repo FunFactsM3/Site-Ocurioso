@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const FormRegisterStyle = styled.form`
-    width: 90%; height: auto;
+    width: 90%; height: 95%;
 
-    gap: 12px;
+    gap: 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -19,7 +19,7 @@ export const FormRegisterStyle = styled.form`
       color: ${({theme}) => theme.color.backgroundColor};
     }
     @media screen and (min-width: 1000px) {
-      width: 90%; height: auto;
+      width: 75%; height: auto;
     }
 
 `;

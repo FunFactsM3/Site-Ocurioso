@@ -1,3 +1,5 @@
+
+
 import React, { useRef, useState } from "react";
 import { createContext } from "react";
 
@@ -16,6 +18,8 @@ export const ModalProviders = ({ children }: IChildren) => {
   const outsideRef = useRef(null);
 
   const changeRegistrationModeForLogin = () => { setModalStateRegister(!isModalRegisterOpen); setModalStateLogin(!isModalLoginOpen);} //TODO: Inverta á logica.
+
+  const changeLoginModeForRegistration = () => { setModalStateRegister(isModalRegisterOpen); setModalStateLogin(isModalLoginOpen);} //TODO: Inverta á logica.
 
   const handleCloseOnOverlay = (
     e: React.MouseEvent<HTMLElement, MouseEvent>
@@ -37,6 +41,8 @@ export const ModalProviders = ({ children }: IChildren) => {
         isModalLoginOpen,
         openModalDash,
         setModalDash,
+        changeRegistrationModeForLogin,
+        changeLoginModeForRegistration
       }}
     >
       {children}

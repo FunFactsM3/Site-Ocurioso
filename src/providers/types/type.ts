@@ -28,8 +28,8 @@ export interface IModalContext {
   toggleModalLogin: () => void;
   toggleModalRegister: () => void;
   handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  toggleModalRegister: () => void;
-  toggleModalLogin: () => void;
+  changeRegistrationModeForLogin: () => void;
+  changeLoginModeForRegistration: () => void;
   openModalDash: boolean;
   setModalDash: React.Dispatch<React.SetStateAction<boolean>>;
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormLoginStyle = styled.form`
     width: 90%; height: auto;
     
-    gap: 12px;
+    gap: 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -18,7 +18,7 @@ export const FormLoginStyle = styled.form`
       color: ${({theme}) => theme.color.backgroundColor};
     }
     @media screen and (min-width: 1000px) {
-      width: 90%; height: auto;
+      width: 75%; height: auto;
     }
 `;
 export const StyledSpanDescription = styled.span`

@@ -10,7 +10,7 @@ export const WrapperStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:var(--background-color-modal);
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
 
   /* img{
     position:absolute;
@@ -19,7 +19,7 @@ export const WrapperStyle = styled.div`
   } */
 `
 export const ModalAsideStyle = styled.div`
-  width: min(90%, 800px); height: auto;
+  width: min(90%, 900px); height: 620px;
   padding: 10px 0;
 
   background-color: ${({theme}) => theme.color.primaryGreyLight};
@@ -31,7 +31,8 @@ export const ModalAsideStyle = styled.div`
   position: relative;
   
   @media screen and (min-width: 1000px) {
-    width: min(90%, 800px); height: 640px;
+    width: min(90%, 900px); height: 680px;
+    padding: 10px;
 
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@ export const ImageStyle = styled.div`
 
   display: none;
   @media screen and (min-width: 1000px) {
-    width: 50%; height: 620px;
+    width: 50%; height: 100%;
 
     background-color: transparent;
 
@@ -78,11 +79,12 @@ export const FormStyle = styled.div`
   justify-content: center;
   
   @media screen and (min-width: 1000px) {
-    width: 50%; height: 100%;
-
+    width: 45%; height: 100%; margin: 0 auto;
+    
     gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `
