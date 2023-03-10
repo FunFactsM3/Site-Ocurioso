@@ -6,9 +6,9 @@ export interface ILoginFormValues{
 }
 
 export interface IRegisterFormValues{
-  age: number;
   name: string;
   email: string;
+  age: number;
   password: string;
   confirmPassword?: string;
 }

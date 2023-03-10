@@ -14,10 +14,10 @@ export const StyledTextField = styled(TextField)`
 
     height: 20px;  width: 100%; 
     
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
     border-bottom: 1px solid ${({theme}) => theme.color.stroke};
-    background-color: ${({theme}) => theme.color.whiteColor};
+    background-color: ${({theme}) => theme.color.backgroundColorInputs};
   }
   
   label {
@@ -29,7 +29,7 @@ export const StyledTextField = styled(TextField)`
 
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root:hover,
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root{
-    background-color: ${({theme}) => theme.color.primaryGreyLight};
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
   }
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root::before{
     border: none!important;
@@ -59,7 +59,7 @@ export const StyleInputPassword = styled(Input)`
     color: ${({theme}) => theme.color.primaryGreyDark};
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: ${({theme}) => theme.color.whiteColor};
+    background-color: ${({theme}) => theme.color.backgroundColorInputs};
       
     border-bottom: 1px solid ${({theme}) => theme.color.stroke};
     border-radius: 10px;
@@ -67,12 +67,16 @@ export const StyleInputPassword = styled(Input)`
   }
   input::placeholder{
     color: ${({theme}) => theme.color.primaryGreyDark};
-    background-color: ${({theme}) => theme.color.whiteColor};
+    background-color: ${({theme}) => theme.color.backgroundColorInputs};
 
     padding: 0 10px;
   }
   .css-q0jhri-MuiInputBase-root-MuiInput-root{
     border-bottom: 1px solid ${({theme}) => theme.color.stroke};
+  }
+  .css-78trlr-MuiButtonBase-root-MuiIconButton-root{
+    color: ${({theme}) => theme.color.backgroundColorInputs};
+    border: 1px solid ${({theme}) => theme.color.backgroundColorInputs};
   }
   ::after{
     border: none !important;

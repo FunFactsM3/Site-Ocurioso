@@ -77,7 +77,7 @@ export const TextTitleStyle = styled.p<IStyle>`
           font-weight: 400;
           line-height: 35px;
           letter-spacing: -0.03em;
-          color: ${({theme}) => theme.color.whiteColor};
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
       case "h2":
         return css`
@@ -86,11 +86,11 @@ export const TextTitleStyle = styled.p<IStyle>`
           font-weight: 600;
           line-height: 22px;
           letter-spacing: -0.04em;
-          color: ${({theme}) => theme.color.whiteColor};
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
       default:
         return css`
-          color: ${({theme}) => theme.color.whiteColor};
+          color: ${({theme}) => theme.color.primaryGreyLight};
           font-size: 10px;
         `;
     }

@@ -12,10 +12,13 @@ declare module "styled-components" {
       primaryGreyMedium: string,
       primaryGreyIcon: string,
       primaryGreyDark: string,
-      backgroundColor: string,
-      whiteColor: string,
-      blackColor: string,
+
+      backgroudnColorTitle: string,
+
       backgroundColorModal: string,
+      backgroundColorInputs: string;
+      backgroundColorWrappper: string;
+      
       stroke: string,
       secondaryyellow: string,
       secondarybuttonhovergreen: string,

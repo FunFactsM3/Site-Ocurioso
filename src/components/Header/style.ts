@@ -17,16 +17,25 @@ export const HeaderStyled = styled.header`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
 
   border-bottom: 1px solid ${({theme}) => theme.color.primaryGreyDark};
 
+  .change{
+    display: none !important;;
+  }
   @media screen and (min-width: 1000px) {
+    gap: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    .change{
+    display: block !important;;
+    }
+    
     img {
       padding-right: 50%;
     }

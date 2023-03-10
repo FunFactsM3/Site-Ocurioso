@@ -18,6 +18,7 @@ const Header = () => {
     <HeaderStyled> 
       <img src="src/assets/title.png" alt="Logo" />
       <Switch 
+        className="change"      
         onChange={toggleTheme}
         checked={title === 'dark'}
         checkedIcon={false}
@@ -25,8 +26,8 @@ const Header = () => {
         height={10}
         width={40}
         handleDiameter={20}
-        onColor="#ffff"
-        offColor="#000000"
+        onColor="#000000"
+        offColor="#ffffff"
       />
       <ButtonOpenModalLogin text="Entrar"  toglle={toggleModalLogin}/>
       <ButtonOpenModalRegister text="Cadastrar" toglle={toggleModalRegister}/>

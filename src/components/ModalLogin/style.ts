@@ -10,13 +10,13 @@ export const WrapperStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:${({theme}) => theme.color.backgroundColorModal};
+  background-color:${({theme}) => theme.color.backgroundColorWrappper};
 `
 export const ModalAsideStyle = styled.div`
   width: min(90%, 900px); height: 500px;
   padding: 20% 0 0 0;
 
-  background-color: ${({theme}) => theme.color.primaryGreyLight};
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
   border-radius: 14px;
 
   display: flex;
@@ -36,7 +36,7 @@ export const ModalAsideStyle = styled.div`
 export const ImageStyle = styled.div`
   width: 50%; height: 100%;
 
-  background-color: ${({theme}) => theme.color.primaryGreyLight};
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
 
   display: none;
 
@@ -56,7 +56,7 @@ export const FormStyle = styled.div`
   width: 100%; height: 100%;
   padding: 10px 0;
 
-  background-color: ${({theme}) => theme.color.primaryGreyLight};
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
   border-radius: 14px;
 
   gap: 10px;
