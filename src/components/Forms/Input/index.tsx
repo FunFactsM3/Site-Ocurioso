@@ -1,6 +1,6 @@
 //TODO: Add TextField
 import React from "react";
-import { StyledTextField, StyleInputPassword } from "./style";
+import { ParagraphErrorStyle, StyledTextField, StyleInputPassword } from "./style";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import IconButton from '@mui/material/IconButton';
 // import Input from '@mui/material/Input';
@@ -12,41 +12,40 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 interface ITextField{
   label: string;
-  type: "text" | "email" | "password" | "number" | "name";
-  register: UseFormRegisterReturn<string>;
+  auto?: string;
+  type?: "text" | "email" | "password" | "number" | "name" ;
   error?: FieldError;
+  register: UseFormRegisterReturn<string>;
 }
 
 interface IPassword{
   register: UseFormRegisterReturn<string>;
   placeholder: string;
+  auto?: string;
   error?: FieldError;
 }
 
 
-const InputDefault = ({label, error, type, register}:ITextField) => (
+const InputDefault = ({label, error, type, auto, register}:ITextField) => (
   <>
-  <StyledTextField type={type} id="standard-basic" label={label}  variant="filled" {...register} />
-  {
-    error 
-      ? <p>{error.message}</p>
-      : null
-  }
+  <StyledTextField type={type} autoComplete={auto} id="standard-basic" label={label}  variant="filled" {...register} />
+  <ParagraphErrorStyle>
+   { error ? error.message  : null }   
+  </ParagraphErrorStyle> 
   </>
 )
-
 export default InputDefault;
 
-export const InputPassword = ({ error, register , placeholder}:IPassword) =>{
+export const InputPassword = ({auto, error, register , placeholder}:IPassword) =>{
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+    console.log(event.target)
   };
 
   return (
   <>
-  <StyleInputPassword {...register} placeholder={placeholder}  id="standard-adornment-password" type={showPassword ? 'text' : 'password'}
+  <StyleInputPassword autoComplete={auto} placeholder={placeholder}  id="standard-adornment-password" type={showPassword ? 'text' : 'password'} {...register} 
     endAdornment={
       <InputAdornment position="end">
         <IconButton aria-label="toggle password visibility" onClick={handleClickShowPassword} onMouseDown={handleMouseDownPassword}>
@@ -56,7 +55,7 @@ export const InputPassword = ({ error, register , placeholder}:IPassword) =>{
     } />
     {
     error 
-      ? <p>{error.message}</p>
+      ? <ParagraphErrorStyle>{error.message}</ParagraphErrorStyle>
       : null
     }
   </>

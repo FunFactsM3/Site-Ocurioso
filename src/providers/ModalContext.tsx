@@ -15,6 +15,8 @@ export const ModalProviders = ({ children }:IChildren) =>{
 
   const outsideRef = useRef(null);
 
+  const changeRegistrationModeForLogin = () => { setModalStateRegister(!isModalRegisterOpen); setModalStateLogin(!isModalLoginOpen);} //TODO: Inverta á logica.
+
   const handleCloseOnOverlay = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (e.target === outsideRef.current) {
       toggleModalRegister();
@@ -22,7 +24,7 @@ export const ModalProviders = ({ children }:IChildren) =>{
   };
    
   return (
-    <ModalContext.Provider value={{menuOpen, setMenuOpen, handleCloseOnOverlay,toggleModalRegister, toggleModalLogin, isModalRegisterOpen, isModalLoginOpen}}>
+    <ModalContext.Provider value={{menuOpen, setMenuOpen, handleCloseOnOverlay,toggleModalRegister, toggleModalLogin, isModalRegisterOpen, isModalLoginOpen, changeRegistrationModeForLogin}}>
       {children}
     </ModalContext.Provider> 
   );

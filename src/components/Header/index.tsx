@@ -12,7 +12,7 @@ const Header = () => {
     <HeaderStyled> 
       <img src="src/assets/title.png" alt="Logo" />
       <ButtonOpenModalLogin text="Entrar"  toglle={toggleModalLogin}/>
-      <ButtonOpenModalRegister text="Cadastra" toglle={toggleModalRegister}/>
+      <ButtonOpenModalRegister text="Cadastrar" toglle={toggleModalRegister}/>
     </HeaderStyled>
   );
 };

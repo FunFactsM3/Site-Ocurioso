@@ -8,12 +8,11 @@ export interface ILoginFormValues{
 }
 
 export interface IRegisterFormValues{
-  email: string;
-  name: string;
   age: number;
+  name: string;
+  email: string;
   password: string;
   confirmPassword?: string;
-
 }
 
 export interface IUserContext{
@@ -21,15 +20,15 @@ export interface IUserContext{
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
 }
 
-
 export interface IModalContext{
   menuOpen: boolean;
-  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isModalRegisterOpen: boolean;
   isModalLoginOpen: boolean;
-  handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  toggleModalRegister: () => void;
+  isModalRegisterOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   toggleModalLogin: () => void;
+  toggleModalRegister: () => void;
+  handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  changeRegistrationModeForLogin: () => void;
 }
 
 export interface ModalProps {

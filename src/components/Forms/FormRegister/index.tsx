@@ -1,33 +1,35 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+
+import { yupResolver } from '@hookform/resolvers/yup';
+
 import { UserContext } from "../../../providers/UserContext";
-import { IRegisterFormValues } from "../../../providers/types/type"
+import { IRegisterFormValues } from "../../../providers/types/type";
+
 import InputDefault, { InputPassword } from "../Input";
 
-import { FormLoginStyle } from "../FormLogin/style";
-import { ButtonCloseModal, ButtonRegister } from "../../Buttons";
-import { ModalContext } from "../../../providers/ModalContext";
+import { FormRegisterStyle } from "./style";
+import { ButtonRegister } from "../../Buttons";
+import { schemaRegister } from "../../../validators/Validator";
 
 type Header = {
   title: string;
 }
 
 const FormRegister = ({title}:Header) => {
-  const { register, handleSubmit, formState: { errors }} = useForm<IRegisterFormValues>();
+  const { register, handleSubmit, formState: { errors }} = useForm<IRegisterFormValues>({resolver: yupResolver(schemaRegister)});
   const { userRegister } = useContext(UserContext)
-  const { toggleModalRegister } = useContext(ModalContext)
 
   return (
-    <FormLoginStyle onSubmit={handleSubmit(userRegister)}>
-      <ButtonCloseModal text="X" toglle={toggleModalRegister}/>
+    <FormRegisterStyle onSubmit={handleSubmit(userRegister)}>
       <h1>{title}</h1>
-      <InputDefault label='Nome' type='name' register={register("name")} error={errors.name} />
-      <InputDefault label='Email' type='email' register={register("email")} error={errors.email} />
-      <InputDefault label='Idade' type='name' register={register("name")} error={errors.age} />
-      <InputPassword placeholder="Senha" register={register("password")} error={errors.password} />
-      <InputPassword placeholder="Confirme sua senha"  register={register("password")} error={errors.confirmPassword} />
+      <InputDefault auto="name" label='Nome' type='name' register={register("name")} error={errors.name} />
+      <InputDefault auto="email" label='Email' type='email' register={register("email")} error={errors.email} />
+      <InputDefault label='Idade'  type='number' register={register("age")} error={errors.age} />
+      <InputPassword auto="new-password" placeholder="Senha" register={register("password")} error={errors.password} />
+      <InputPassword auto="password" placeholder="Confirme sua senha"  register={register("confirmPassword")} error={errors.confirmPassword} />
       <ButtonRegister text="Cadastre-se" />
-    </FormLoginStyle>
+    </FormRegisterStyle>
   );
 };
 

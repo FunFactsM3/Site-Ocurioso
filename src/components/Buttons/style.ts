@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
 
+//TODO: VAR COLOR
 export const ButtonCloseStyled = styled.button`
-  width: auto;
-  height: 36px;
-  padding: 10px 19px;
+  width: auto; height: 36px;
+  padding: 10px 8px;
+
   border-radius: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -12,25 +13,30 @@ export const ButtonCloseStyled = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (min-width: 1000px) {
+    width: auto; height: 40px;
+    padding: 10px 15px;
+  }
+
   ${({color}) => {
     switch (color) {
       case 'green':
         return css`
-          background-color: var(--primary-green);
-          color: var(--white-color);
+          background-color: ${({theme}) => theme.color.primaryGreen};
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
       default:
         return css`
-          background-color: var(--primary-red);
-          color: var(--white-color);
+          background-color: ${({theme}) => theme.color.primaryRed};
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
     }
   }}
 `;
 
 export const ButtonOpenStyled = styled.button`
-  width: auto;
-  height: 36px;
+  width: auto; height: 36px;
   margin-right: 20px;
   background: none;
   font-family: 'Montserrat', sans-serif;
@@ -44,11 +50,11 @@ export const ButtonOpenStyled = styled.button`
     switch (color) {
       case 'blue':
         return css`
-          color: var(--primary-cyan);
+          color: ${({theme}) => theme.color.primaryCyan};
         `;
       default:
         return css`
-          color: var(--white-color);
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
     }
   }}
@@ -60,8 +66,12 @@ export const ButtonLoginStyled = styled.button`
   border-radius: 12px;
   font-weight: 700;
   font-size: 14px;
-  background-color: var(--primary-green);
-  color: var(--white-color);
+  background-color: ${({theme}) => theme.color.primaryGreen};
+  color: ${({theme}) => theme.color.primaryGreyLight};
+
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
 `;
 
 export const ButtonRegisterStyled = styled.button`
@@ -70,19 +80,30 @@ export const ButtonRegisterStyled = styled.button`
   border-radius: 12px;
   font-weight: 700;
   font-size: 14px;
-  background-color: var(--primary-red);
-  color: var(--white-color);
+  background-color: ${({theme}) => theme.color.primaryRed};
+  color: ${({theme}) => theme.color.primaryGreyLight};
+
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
 `;
 
 export const ButtonModalCloseStyled = styled.button`
   width: auto;
   height: auto;
   background-color: transparent;
-  color: var(--black-color);
+  color: ${({theme}) => theme.color.primaryGreyDark};
   font-size: 20px;
   font-weight: 100;
+
+  z-index: 1;
   position: absolute;
-  right: 0;
-  top: -10px;
+  right: 15px; top: 10px;
   cursor: pointer;
-`;
+
+  @media screen and (min-width: 1000px) {
+    position: absolute;
+
+    right: 15px; top: 10px;
+  }
+`

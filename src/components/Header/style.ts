@@ -20,7 +20,7 @@ export const HeaderStyled = styled.header`
   justify-content: space-between;
   flex-direction: row;
 
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 1px solid ${({theme}) => theme.color.primaryGreyDark};
 
   @media screen and (min-width: 1000px) {
     display: flex;
@@ -57,11 +57,11 @@ export const StyledButtonLogin = styled.button<IStyledParagraphProps>`
     switch (color) {
       case "blue":
         return css`
-          color: var(--primary-cyan);
+          color: ${({theme}) => theme.color.primaryCyan};
         `;
       default:
         return css`
-          color: var(--primary-grey-light);
+          color: ${({theme}) => theme.color.primaryGreyLight};
         `;
     }
   }}
@@ -72,7 +72,7 @@ export const StyledButtonRegister = styled.button<IStyledParagraphProps>`
   border-radius: 12px;
   font-weight: 700;
   font-size: 14px;
-  color: var(--white-color);
+  color: ${({theme}) => theme.color.whiteColor};
 
   ${({ size }) => {
     switch (size) {
@@ -91,11 +91,11 @@ export const StyledButtonRegister = styled.button<IStyledParagraphProps>`
     switch (background) {
       case "green":
         return css`
-          background-color: var(--primary-green);
+          background-color: ${({theme}) => theme.color.primaryGreen};
         `;
       default:
         return css`
-          background-color: var(--primary-red);
+          background-color: ${({theme}) => theme.color.primaryRed};
         `;
     }
   }}
@@ -103,7 +103,7 @@ export const StyledButtonRegister = styled.button<IStyledParagraphProps>`
 
 export const StyledModalClose = styled.button`
   background-color: transparent;
-  color: var(--black-color);
+  color: ${({theme}) => theme.color.primaryGreyDark};
   font-size: 20px;
   font-weight: 100;
   position: absolute;

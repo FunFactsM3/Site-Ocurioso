@@ -3,24 +3,34 @@ import Input from '@mui/material/Input';
 import styled from 'styled-components';
 
 export const StyledTextField = styled(TextField)`
-  width: 100%; 
-  background-color: var(--white-color);
-  box-shadow: 0 22px 45.8px -11.45px #34292742;
+  width: 100%; height: 50px;
+
+  background-color: ${({theme}) => theme.color.whiteColor};
+
+  border-radius: 10px;
 
   input {
     font-family: Arial, Helvetica, sans-serif;
+
     height: 20px;  width: 100%; 
+    
     border-radius: 10px;
     border: none;
-    background-color: var(--white-color);
+    border-bottom: 1px solid ${({theme}) => theme.color.stroke};
+    background-color: ${({theme}) => theme.color.whiteColor};
   }
   
   label {
     &.Mui-focused {
-      color:  var(--primary-grey-dark);
+      color: ${({theme}) => theme.color.primaryGreyDark};
+      font-family: Arial, Helvetica, sans-serif;
     }
   }
 
+  .css-1ff8729-MuiInputBase-root-MuiFilledInput-root:hover,
+  .css-1ff8729-MuiInputBase-root-MuiFilledInput-root{
+    background-color: ${({theme}) => theme.color.primaryGreyLight};
+  }
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root::before{
     border: none!important;
   }
@@ -29,29 +39,42 @@ export const StyledTextField = styled(TextField)`
   }
 `;
 
+export const ParagraphErrorStyle = styled.p`
+  color: ${({theme}) => theme.color.primaryRed} ;
+  align-self: flex-start;
+  font-family:"Open Sans";
+  font-size: 0.62rem;
+  font-weight: 400;
+  line-height: 14px;
+`
 export const StyleInputPassword = styled(Input)`
   width: 100%; height: 50px;
-  padding-left: 10px;
-
-  background-color: var(--white-color);
-
-  box-shadow: 0 22px 45.8px -11.45px #34292742;
+  margin: 12px;
   border-radius: 10px;
- 
+
+  /* border: 1px solid red; */
   input {
-    color: var(--primary-grey-dark);
+    width: 100%; height: 100%;
+    padding: 0 10px;
+
+    color: ${({theme}) => theme.color.primaryGreyDark};
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: var(--white-color);
-  
-    height: 20px;
+    background-color: ${({theme}) => theme.color.whiteColor};
+      
+    border-bottom: 1px solid ${({theme}) => theme.color.stroke};
     border-radius: 10px;
+
   }
   input::placeholder{
-    color: var(--primary-grey-dark);
-    background-color: var(--white-color);
+    color: ${({theme}) => theme.color.primaryGreyDark};
+    background-color: ${({theme}) => theme.color.whiteColor};
+
+    padding: 0 10px;
   }
- 
+  .css-q0jhri-MuiInputBase-root-MuiInput-root{
+    border-bottom: 1px solid ${({theme}) => theme.color.stroke};
+  }
   ::after{
     border: none !important;
   }
