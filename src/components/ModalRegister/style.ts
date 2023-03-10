@@ -10,7 +10,7 @@ export const WrapperStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:var(--background-color-modal);
 
   /* img{
     position:absolute;
@@ -22,7 +22,7 @@ export const ModalAsideStyle = styled.div`
   width: min(90%, 800px); height: auto;
   padding: 10px 0;
 
-  background-color: white;
+  background-color: ${({theme}) => theme.color.primaryGreyLight};
   border-radius: 14px;
 
   display: flex;
@@ -68,7 +68,7 @@ export const FormStyle = styled.div`
   width: 100%; height: 100%;
   padding: 10px 0;
 
-  background-color: white;
+  background-color: ${({theme}) => theme.color.primaryGreyLight};
   border-radius: 14px;
 
   gap: 10px;
@@ -84,6 +84,5 @@ export const FormStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 `
