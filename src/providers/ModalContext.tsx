@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { createContext } from "react";
+import { IChildren, IModalContext } from "./types/Context";
 
-import { IChildren, IModalContext } from "./types/type";
 
 export const ModalContext = createContext({} as IModalContext);
 

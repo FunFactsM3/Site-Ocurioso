@@ -1,16 +1,11 @@
 import React from "react";
 
-import { ButtonLoginStyled, ButtonOpenStyled, ButtonCloseStyled, ButtonRegisterStyled, ButtonModalCloseStyled } from "./style";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-interface IButton{
-  text: string ;
-  color?: string;
-  toglle?:() => void;
-}
+import { IButton } from "../../providers/types/Interface";
 
+import { ButtonLoginStyled, ButtonOpenStyled, ButtonCloseStyled, ButtonRegisterStyled, ButtonModalCloseStyled } from "./style";
 
-//TODO: passar para o types, esses botões são para abrir o modal
 export const ButtonCloseModal = ({toglle, text}:IButton) => (
   <ButtonModalCloseStyled onClick={toglle} >{text}</ButtonModalCloseStyled>
 )

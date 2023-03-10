@@ -3,23 +3,24 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
+import { DarkProviders } from './providers/DarkThemeContext'
 
 import { ModalProviders } from './providers/ModalContext'
 import { UserProviders } from './providers/UserContext'
 
-import { mainTheme, darkTheme } from './styles/theme'
-import { ThemeProvider } from 'styled-components'
+import { GlobalStyles } from './styles/global'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 <React.StrictMode>
   <BrowserRouter>
-    <ThemeProvider theme={mainTheme}>
+    <DarkProviders>
       <ModalProviders>
         <UserProviders>
+          <GlobalStyles />
           <App />
         </UserProviders>
       </ModalProviders>
-    </ThemeProvider>
+    </DarkProviders>
   </BrowserRouter>
 </React.StrictMode>,
 )

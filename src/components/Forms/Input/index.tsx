@@ -1,30 +1,13 @@
-//TODO: Add TextField
 import React from "react";
+
 import { ParagraphErrorStyle, StyledTextField, StyleInputPassword } from "./style";
-import { FieldError, UseFormRegisterReturn } from "react-hook-form";
+
 import IconButton from '@mui/material/IconButton';
-// import Input from '@mui/material/Input';
-
-import InputAdornment from '@mui/material/InputAdornment';
-
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import InputAdornment from '@mui/material/InputAdornment';
 
-interface ITextField{
-  label: string;
-  auto?: string;
-  type?: "text" | "email" | "password" | "number" | "name" ;
-  error?: FieldError;
-  register: UseFormRegisterReturn<string>;
-}
-
-interface IPassword{
-  register: UseFormRegisterReturn<string>;
-  placeholder: string;
-  auto?: string;
-  error?: FieldError;
-}
-
+import { IPassword, ITextField} from "../../../providers/types/Interface";
 
 const InputDefault = ({label, error, type, auto, register}:ITextField) => (
   <>

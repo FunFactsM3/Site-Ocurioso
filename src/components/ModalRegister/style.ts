@@ -11,12 +11,6 @@ export const WrapperStyle = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({theme}) => theme.color.backgroundColorModal};
-
-  /* img{
-    position:absolute;
-    right:43%;
-    bottom:4%;
-  } */
 `
 export const ModalAsideStyle = styled.div`
   width: min(90%, 900px); height: 620px;

@@ -4,17 +4,16 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { UserContext } from "../../../providers/UserContext";
-import { IRegisterFormValues } from "../../../providers/types/type";
+import { Header, IRegisterFormValues } from "../../../providers/types/Interface";
 
 import InputDefault, { InputPassword } from "../Input";
 
 import { FormRegisterStyle } from "./style";
+
 import { ButtonRegister } from "../../Buttons";
+
 import { schemaRegister } from "../../../validators/Validator";
 
-type Header = {
-  title: string;
-}
 
 const FormRegister = ({title}:Header) => {
   const { register, handleSubmit, formState: { errors }} = useForm<IRegisterFormValues>({resolver: yupResolver(schemaRegister)});
