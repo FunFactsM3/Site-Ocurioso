@@ -1,4 +1,4 @@
-export interface IChildren{
+export interface IChildren {
   children: React.ReactNode;
 }
 
@@ -20,7 +20,7 @@ export interface IUserContext{
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
 }
 
-export interface IModalContext{
+export interface IModalContext {
   menuOpen: boolean;
   isModalLoginOpen: boolean;
   isModalRegisterOpen: boolean;
@@ -28,7 +28,10 @@ export interface IModalContext{
   toggleModalLogin: () => void;
   toggleModalRegister: () => void;
   handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  changeRegistrationModeForLogin: () => void;
+  toggleModalRegister: () => void;
+  toggleModalLogin: () => void;
+  openModalDash: boolean;
+  setModalDash: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ModalProps {
@@ -37,4 +40,3 @@ export interface ModalProps {
   onClose: () => void;
   children: string;
 }
-

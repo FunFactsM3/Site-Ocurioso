@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
-export const TitleStyle = styled.h1`
-  font-size: 1rem;
-`
+export const HomePageStyled = styled.div`
+  background: url("/src/assets/background.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+`;
