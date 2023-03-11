@@ -9,6 +9,7 @@ export const HeaderHome = () => {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+  
   return (
     <HeaderHomePageStyled>
       <img src="src/assets/title.png" alt="Logo" />
@@ -29,6 +30,7 @@ export const HeaderHome = () => {
           </nav>
         )}
       </div>
+     
       <p>Sair →</p>
     </HeaderHomePageStyled>
   );

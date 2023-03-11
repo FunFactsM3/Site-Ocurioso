@@ -5,6 +5,12 @@ export interface IDarkContext{
   theme: DefaultThemes,
   toggleTheme(): void;
 }
+
+export interface ISpeechContext{
+  img: boolean,
+  setImg: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleImg(): void;
+}
 export interface IUserContext{
   userLogin: (formData: ILoginFormValues) => Promise<void>;
   userRegister: (formData: IRegisterFormValues) => Promise<void>;

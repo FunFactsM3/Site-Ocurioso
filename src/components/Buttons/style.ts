@@ -136,3 +136,39 @@ export const ButtonModalCloseStyled = styled.button`
     right: 15px; top: 10px;
   }
 `
+
+export const ButtonRecord = styled.button`
+  width: 100%; height: 36px;
+  
+  border-radius: 12px;
+  
+  transition: .5s ease-out;
+
+  background-color: ${({theme}) => theme.color.primaryRed};
+  color: ${({theme}) => theme.color.primaryGreyLight};
+
+  :hover{
+    background-color: ${({theme}) => theme.color.secondarybuttonhoverred};
+  }
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
+`
+
+export const ButtonSearch = styled.button`
+  width: 100%; height: 36px;
+  
+  border-radius: 12px;
+  
+  transition: .5s ease-out;
+
+  background-color: ${({theme}) => theme.color.primaryGreen};
+  color: ${({theme}) => theme.color.primaryGreyLight};
+
+  :hover{
+    background-color: ${({theme}) => theme.color.secondarybuttonhovergreen};
+  }
+  @media screen and (min-width: 1000px) {
+    width: 100%; height: 40px;
+  }
+`

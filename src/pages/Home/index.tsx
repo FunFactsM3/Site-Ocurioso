@@ -12,7 +12,7 @@ import { ModalHome } from "../../components/ModalHome";
 const DashBoardPage = () => {
   return (
     <>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <HomePageStyled>
         <HeaderHome />
         <SearchHome />

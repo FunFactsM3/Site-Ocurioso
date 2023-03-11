@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
 export const SearchHomePageStyled = styled.nav`
+  height: 100px;
+
+  gap: 5px;
   display: flex;
   align-items: center;
-
-  background-color: #f6f5f4;
+  flex-direction: row;
+  
+  background-color:${({theme}) => theme.color.backgroundColorModal};
 
   border-radius: 20px;
 
-  margin: 3rem 1rem;
+  margin: 48px 16px;
 
   font-family: "Montserrat", sans-serif;
   input {
-    height: 40px;
-    width: 70%;
+    width: 50%; height: 40px;
+
 
     padding: 0 0 0 5px;
 
@@ -35,9 +39,10 @@ export const SearchHomePageStyled = styled.nav`
   }
 `;
 
-export const ImgworldStyled = styled.img`
-  width: 85px;
-  height: 70px;
+export const ImgStyle = styled.img`
+  width: 25%; height: 100%;
+  padding: 10px 0;
+
 `;
 
 export const ImgSearchStyled = styled.img`
@@ -52,6 +57,16 @@ export const ImgSearchStyled = styled.img`
     margin: 0 0 0 1rem;
   }
 `;
+export const DivStyle = styled.div`
+  width: 25%; height: 100%;
+  padding: 10px;
+
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`
 
 export const ImgMicStyled = styled.img`
   background-color: #e9425a;
