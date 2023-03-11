@@ -6,7 +6,7 @@ export const StyledModalHome = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: #f6f5f4;
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
 
   width: 600px;
   max-width: 90%;
@@ -34,7 +34,7 @@ export const StyledModalHome = styled.div`
   }
 
   p {
-    color: #757575;
+    color:${({theme}) => theme.color.backgroudnColorTitle};
     margin: 1rem 1rem 1rem 2rem;
   }
 

@@ -1,8 +1,5 @@
-import React, { useContext } from "react";
-import { Turn as Hamburger } from "hamburger-react";
-import { ModalContext } from "../../providers/ModalContext";
+import React from "react";
 import { HeaderHome } from "../../components/HeaderHome";
-import { GlobalStyles } from "../../styles/global";
 import { HomePageStyled } from "./style";
 import { SearchHome } from "../../components/SearchHome";
 import { MainHome } from "../../components/MainHome";
@@ -12,7 +9,6 @@ import { ModalHome } from "../../components/ModalHome";
 const DashBoardPage = () => {
   return (
     <>
-      <GlobalStyles />
       <HomePageStyled>
         <HeaderHome />
         <SearchHome />

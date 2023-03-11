@@ -14,7 +14,7 @@ export interface IRegisterFormValues{
 }
 
 export interface IButton{
-  text: string ;
+  text?: string | null ;
   color?: string;
   toglle?:() => void;
 }

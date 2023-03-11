@@ -6,7 +6,7 @@ export const CardHomePageStyled = styled.li`
   min-width: 280px;
   height: 480px;
 
-  background-color: #f6f5f4;
+  background-color: ${({theme}) => theme.color.backgroundColorModal};
 
   border-radius: 20px;
 
@@ -23,7 +23,7 @@ export const CardHomePageStyled = styled.li`
   }
 
   p {
-    color: #757575;
+    color: ${({theme}) => theme.color.backgroudnColorTitle};
     margin: 1rem 1rem 3rem 1rem;
   }
 

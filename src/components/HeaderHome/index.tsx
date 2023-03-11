@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import { ModalContext } from "../../providers/ModalContext";
 import { Turn as Hamburger } from "hamburger-react";
 import { HeaderHomePageStyled } from "./style";
+import { UserContext } from "../../providers/UserContext";
 
 export const HeaderHome = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);
-
+  const { userLogout } = useContext(UserContext);
+  
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+  
   return (
     <HeaderHomePageStyled>
       <img src="src/assets/title.png" alt="Logo" />
@@ -29,7 +32,8 @@ export const HeaderHome = () => {
           </nav>
         )}
       </div>
-      <p>Sair →</p>
+     
+      <p onClick={userLogout}>Sair →</p>
     </HeaderHomePageStyled>
   );
 };

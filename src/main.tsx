@@ -6,6 +6,7 @@ import App from './App'
 import { DarkProviders } from './providers/DarkThemeContext'
 
 import { ModalProviders } from './providers/ModalContext'
+import { SpeechContext, SpeechProviders } from './providers/SpeechContext'
 import { UserProviders } from './providers/UserContext'
 
 import { GlobalStyles } from './styles/global'
@@ -13,14 +14,18 @@ import { GlobalStyles } from './styles/global'
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 <React.StrictMode>
   <BrowserRouter>
-    <DarkProviders>
-      <ModalProviders>
-        <UserProviders>
-          <GlobalStyles />
-          <App />
-        </UserProviders>
-      </ModalProviders>
-    </DarkProviders>
+    <SpeechProviders>
+        <ModalProviders>
+          <UserProviders>
+            <DarkProviders>
+
+            <GlobalStyles />
+            <App />
+            </DarkProviders>
+
+          </UserProviders>
+        </ModalProviders>
+    </SpeechProviders>
   </BrowserRouter>
 </React.StrictMode>,
 )
