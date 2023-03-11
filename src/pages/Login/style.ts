@@ -11,12 +11,41 @@ export const LoginPageStyled = styled.div`
   background-size: cover;
   height: 100vh;
 
+  position: relative;
+  h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    color: ${({theme})=>theme.color.primaryGreyLight};
+
+    position: absolute;
+    right: 40%;
+  }
+
+  @media screen and (min-width: 760px) {
+    background-image: url("/src/assets/background.png");
+    background-position-y: -30px;
+    background-position-x: -180px;
+    background-size: cover;
+    height: 100vh;
+
+  }
+
   @media screen and (min-width: 1000px) {
     background-image: url("/src/assets/background.png");
-   background-size: 100%;
+    background-size: 100%;
     background-position-y: -115px;
-   background-position-x: 5px;
+    background-position-x: 5px;
+
+    h3{
+      position: absolute;
+      right: 45%;
+    }
+    
   }
+
+
 `;
 
 export const DivStyle = styled.div`
@@ -44,9 +73,18 @@ export const MainStyle = styled.main`
 
   position: relative;
 
+  @media screen and (min-width: 600px) {
+    width: 350px; height: 400px;
+    margin-left: 20px;
+    gap: 25px;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   @media screen and (min-width: 1000px) {
-    width: 500px; height: 400px;
+    width: 470px; height: 400px;
     margin: 0 0 0 100px;
 
     gap: 25px;

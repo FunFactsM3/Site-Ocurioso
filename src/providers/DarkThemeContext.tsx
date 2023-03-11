@@ -10,7 +10,7 @@ import { IChildren, IDarkContext } from "./types/Context";
 export const DarkContext = createContext({} as IDarkContext);
 
 export const DarkProviders = ({ children }:IChildren) =>{
-  const [theme, setTheme] = usePersistedState('theme',light);
+  const [theme, setTheme] = usePersistedState('@OcurisoTheme:',light);
 
   const toggleTheme = () => {
     setTheme(theme === light ? dark : light);

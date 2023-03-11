@@ -13,6 +13,7 @@ export interface ISpeechContext{
 }
 export interface IUserContext{
   userLogin: (formData: ILoginFormValues) => Promise<void>;
+  userLogout(): void;
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
 }
 

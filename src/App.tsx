@@ -23,7 +23,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme='light' //TODO: manipular com estado
+        theme={ theme.title === 'light' ? "light" : "dark"} 
       />
       </ ThemeProvider>
     </>
