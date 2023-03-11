@@ -12,7 +12,7 @@ import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
 export const UserContext = createContext({} as IUserContext);
 
 export const UserProviders = ({ children }:IChildren) =>{
-  //TODO: crie um estado para armazenar o token, age.
+
   const navigate = useNavigate();
 
   const userLogin = async (formData: ILoginFormValues) => {

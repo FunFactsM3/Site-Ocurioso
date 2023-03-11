@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 
 import { DivStyle, ImgStyle, SearchHomePageStyled } from "./style";
 
 import { ButtonToSearch, ButtonToReco, ButtonToRecord } from "../Buttons";
-
-import { SpeechContext } from "../../providers/SpeechContext";
 
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
