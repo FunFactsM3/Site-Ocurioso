@@ -50,3 +50,15 @@ export interface IPassword{
   auto?: string;
   error?: FieldError;
 }
+
+export interface IPosts{
+  type: string;
+  id: number;
+  src:string;
+  title:string;
+  description:string;
+  content:string;
+  category:string;
+  minimunAge?:string;
+
+}

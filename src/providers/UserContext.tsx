@@ -12,6 +12,7 @@ import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
 export const UserContext = createContext({} as IUserContext);
 
 export const UserProviders = ({ children }:IChildren) =>{
+  const [searchValue,  setSearchValue] = useState("");
 
   const navigate = useNavigate();
 
@@ -55,7 +56,7 @@ export const UserProviders = ({ children }:IChildren) =>{
   
   return (
     <UserContext.Provider 
-      value={{ userLogin, userRegister, userLogout }}>
+      value={{ userLogin, userRegister, userLogout,searchValue,  setSearchValue }}>
       {children}
     </UserContext.Provider>
   );
