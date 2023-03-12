@@ -25,6 +25,10 @@ export const UserProviders = ({ children }: IChildren) => {
     localPostsFavorits ? JSON.parse(localPostsFavorits) : []
   );
 
+  const [ValueSelect, setValueSelect] = useState({ type: "Deslogado" });
+  const [PostsFilter, setPostsFilter] = useState<IPosts[]>([]);
+  const [Logado, setLogado] = useState(false);
+
   //TODO: crie um estado para armazenar o token, age.
   const navigate = useNavigate();
 
@@ -36,6 +40,8 @@ export const UserProviders = ({ children }: IChildren) => {
 
       setUser(response.data.user.type);
       localStorage.setItem("@USER", response.data.user.type);
+      setLogado(true);
+
       navigate("/dash");
     } catch (errors) {
       console.log(errors);
@@ -67,7 +73,8 @@ export const UserProviders = ({ children }: IChildren) => {
   const userLogout = () => {
     localStorage.removeItem("@Ocurioso:");
     localStorage.removeItem("@USER");
-    localStorage.removeItem("@POSTS");
+    setLogado(false);
+
     localStorage.removeItem("@Favorits");
     navigate("/");
   };
@@ -83,6 +90,7 @@ export const UserProviders = ({ children }: IChildren) => {
           const response = await Axios.get("/posts");
 
           setPostsList(response.data);
+          setPostsFilter(response.data);
           localStorage.setItem("@POSTS", JSON.stringify(response.data));
         } catch (error) {
           toast.error(`${error}`);
@@ -94,15 +102,14 @@ export const UserProviders = ({ children }: IChildren) => {
         try {
           const response = await Axios.get("/posts?minimunAge=kids");
           setPostsList(response.data);
-
-          localStorage.setItem("@POSTS", JSON.stringify(response.data));
+          setPostsFilter(response.data);
         } catch (error) {
           toast.error(`${error}`);
         }
       };
       LoadPostsdata();
     }
-  }, []);
+  }, [Logado]);
 
   useEffect(() => {
     localStorage.setItem("@Favorits", JSON.stringify(PostsFavorits));
@@ -119,6 +126,34 @@ export const UserProviders = ({ children }: IChildren) => {
     }
   };
 
+  const type = localStorage.getItem("@USER");
+
+  useEffect(() => {
+    LoadPostsdata(`${ValueSelect.type}`);
+  }, [ValueSelect]);
+
+  const LoadPostsdata = (data: string) => {
+    if (type === "young") {
+      if (data === "") {
+        setPostsFilter(PostsList);
+      } else {
+        const filteredList = PostsList.filter((Post) => Post.category === data);
+        setPostsFilter(filteredList);
+      }
+    } else {
+      if (data === "") {
+        setPostsFilter(PostsList);
+      } else {
+        const filteredList = PostsList.filter((Post) => Post.category === data);
+        setPostsFilter(filteredList);
+      }
+    }
+  };
+
+  const favoritPage = () => {
+    navigate("/Favorit");
+  };
+
   return (
     <UserContext.Provider
       value={{
@@ -129,6 +164,11 @@ export const UserProviders = ({ children }: IChildren) => {
         setPostsList,
         PostsList,
         addPostToFavorit,
+        ValueSelect,
+        setValueSelect,
+        LoadPostsdata,
+        PostsFilter,
+        favoritPage,
       }}
     >
       {children}

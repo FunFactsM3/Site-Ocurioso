@@ -5,11 +5,11 @@ import { Card } from "./Card";
 import { UlHomePageStyled } from "./style";
 
 export const MainHome = () => {
-  const { PostsList } = useContext(UserContext);
+  const { PostsList, PostsFilter } = useContext(UserContext);
 
   return (
     <UlHomePageStyled>
-      {PostsList.map((Post: IPosts) => (
+      {PostsFilter.map((Post: IPosts) => (
         <Card key={Post.id} Post={Post} />
       ))}
     </UlHomePageStyled>

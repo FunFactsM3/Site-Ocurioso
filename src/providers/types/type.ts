@@ -24,6 +24,17 @@ export interface IUserContext {
   setPostsList: React.Dispatch<React.SetStateAction<IPosts[]>>;
   PostsList: IPosts[];
   addPostToFavorit: (Post: IPosts) => void;
+  ValueSelect: {
+    type: string;
+  };
+  setValueSelect: React.Dispatch<
+    React.SetStateAction<{
+      type: string;
+    }>
+  >;
+  LoadPostsdata: (data: string) => void;
+  PostsFilter: IPosts[];
+  favoritPage: () => void;
 }
 
 export interface IModalContext {
