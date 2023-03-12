@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import { ModalContext } from "../../../providers/ModalContext";
+import { IPosts } from "../../../providers/types/Interface";
+import axios from "../../../service/axios";
 import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
-
-export const Card = () => {
+type Post = {
+  item: IPosts
+}
+export const Card = ({item}:Post) => {
   const { setModalDash } = useContext(ModalContext);
 
+  
   return (
     <>
       <CardHomePageStyled>
@@ -14,7 +19,7 @@ export const Card = () => {
           onClick={() => setModalDash(true)}
         />
         <div>
-          <h3>Titulo</h3>
+          <h3>{item.type}</h3>
           <p>
             Descrição da categoria de forma resumida, aumentei o texto para
             simular comportamentos na página

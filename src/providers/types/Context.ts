@@ -15,6 +15,8 @@ export interface IUserContext{
   userLogin: (formData: ILoginFormValues) => Promise<void>;
   userLogout(): void;
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
+  searchValue: string;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface IModalContext {
