@@ -9,7 +9,6 @@ import ModalLogin from "../../components/ModalLogin";
 import ModalRegister from "../../components/ModalRegister";
 import {  ButtonOpenModalLogin, ButtonOpenModalRegister } from "../../components/Buttons";
 
-//TODO: tente fazer somente um modal com renderizaçã ode inputs de forma condicional
 
 const LoginPage = () => {
   const { toggleModalLogin, toggleModalRegister, isModalLoginOpen, isModalRegisterOpen} = useContext(ModalContext);
