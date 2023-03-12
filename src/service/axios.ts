@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const Axios = axios.create({
-     baseURL: "http://localhost:3001/",
-     timeout: 7000,
-})
+  baseURL: "https://site-ocurioso.onrender.com/",
+  timeout: 7000,
+});
 
 export default Axios;

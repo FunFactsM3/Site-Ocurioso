@@ -1,36 +1,30 @@
 import React, { useContext } from "react";
+import { string } from "yup";
 import { ModalContext } from "../../providers/ModalContext";
+import { UserContext } from "../../providers/UserContext";
 import { IMGCardHomePageStyled } from "../MainHome/Card/style";
 import { IMGModalHomePageStyled, StyledModalHome } from "./style";
 
 export const ModalHome = () => {
-  const { openModalDash, setModalDash } = useContext(ModalContext);
+  const { openModalDash, setModalDash, Post } = useContext(ModalContext);
+  const { addPostToFavorit } = useContext(UserContext);
 
   if (openModalDash) {
     return (
       <StyledModalHome>
-        <IMGModalHomePageStyled src="src/assets/IMGDesmatamento.png" alt="" />
+        <IMGModalHomePageStyled src={Post.src.replace("Img:", "")} alt="" />
         <button onClick={() => setModalDash(false)}>X</button>
         <>
-          <h3>Titulo</h3>
-          <p>
-            Descrição da categoria de forma completa, aumentei o texto para
-            simular comportamentos na página. Descrição da categoria de forma
-            completa, aumentei o texto para simular comportamentos na página.
-          </p>
-          <p>
-            Descrição da categoria de forma completa, aumentei o texto para
-            simular comportamentos na página.Descrição da categoria de forma
-            completa, aumentei o texto para simular comportamentos na página.
-            Descrição da categoria de forma completa, aumentei o texto para
-            simular comportamentos na página. Descrição da categoria de forma
-            completa, aumentei o texto para simular comportamentos na página.
-            Descrição da categoria de forma completa, aumentei o texto para
-            simular comportamentos na página.
-          </p>
+          <h3>{Post.title}</h3>
+          <p>{Post.description}</p>
+          <p>{Post.content}</p>
           <div>
-            <span>Categoria</span>
-            <img src="src/assets/coracao.png" alt="coracao" />
+            <span>{Post.category}</span>
+            <img
+              src="src/assets/coracao.png"
+              alt="coracao"
+              onClick={() => addPostToFavorit(Post)}
+            />
           </div>
         </>
       </StyledModalHome>

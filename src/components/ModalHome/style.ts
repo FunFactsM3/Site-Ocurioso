@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledModalHome = styled.div`
   position: absolute;
-  top: 500px;
+  top: 600px;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -36,10 +36,11 @@ export const StyledModalHome = styled.div`
   p {
     color: #757575;
     margin: 1rem 1rem 1rem 2rem;
+    font-size: 14px;
   }
 
   div {
-    margin: 3rem 1rem 1.5rem 2rem;
+    margin: 2rem 1rem 1.5rem 2rem;
     align-items: center;
 
     span {
@@ -47,7 +48,7 @@ export const StyledModalHome = styled.div`
       background-color: #82d74d;
       padding: 5px 10px;
       border-radius: 100px;
-      margin: 1rem 3rem 0 0;
+      margin: 1rem 2rem 0 0;
     }
     img {
       margin: -7px;
@@ -57,4 +58,19 @@ export const StyledModalHome = styled.div`
 
 export const IMGModalHomePageStyled = styled.img`
   width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 200px;
+
+  @media (min-width: 374px) {
+    height: 250px;
+  }
+  @media (min-width: 424px) {
+    height: 270px;
+  }
+  @media (min-width: 525px) {
+    height: 310px;
+  }
+  @media (min-width: 620px) {
+    height: 370px;
+  }
 `;

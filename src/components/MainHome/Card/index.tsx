@@ -1,29 +1,43 @@
 import React, { useContext } from "react";
 import { ModalContext } from "../../../providers/ModalContext";
+import { IPosts } from "../../../providers/types/type";
+import { UserContext } from "../../../providers/UserContext";
 import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
 
-export const Card = () => {
-  const { setModalDash } = useContext(ModalContext);
+interface IPost2 {
+  Post: IPosts;
+}
+
+export const Card = ({ Post }: IPost2) => {
+  const { setModalDash, setPost } = useContext(ModalContext);
+  const { addPostToFavorit } = useContext(UserContext);
+
+  function savepost() {
+    localStorage.setItem("@POST", JSON.stringify(Post));
+  }
 
   return (
     <>
       <CardHomePageStyled>
         <IMGCardHomePageStyled
-          src="src/assets/IMGDesmatamento.png"
-          alt=""
-          onClick={() => setModalDash(true)}
+          src={Post.src.replace("Img:", "")}
+          alt={Post.title}
+          onClick={() => {
+            setModalDash(true), setPost(Post);
+          }}
         />
-        <div>
-          <h3>Titulo</h3>
-          <p>
-            Descrição da categoria de forma resumida, aumentei o texto para
-            simular comportamentos na página
-          </p>
+        <section>
+          <h3>{Post.title}</h3>
+          <p>{Post.description}</p>
           <div>
-            <span>Categoria</span>
-            <img src="src/assets/coracao.png" alt="coracao" />
+            <span>{Post.category}</span>
+            <img
+              src="src/assets/coracao.png"
+              alt="coracao"
+              onClick={() => addPostToFavorit(Post)}
+            />
           </div>
-        </div>
+        </section>
       </CardHomePageStyled>
     </>
   );

@@ -12,17 +12,18 @@ export const HeaderHomePageStyled = styled.header`
   }
   p {
     color: #f6f5f4;
-    padding: 0 1.5rem 0 0;
+    padding: 0 1rem 0 0;
     cursor: pointer;
   }
 
   nav {
     display: flex;
     flex-direction: column;
+    max-width: 100px;
     select {
       color: #757575;
       border-radius: 20px 20px 0 0;
-      padding: 5px 10px;
+      padding: 5px 5px;
       cursor: pointer;
     }
 
