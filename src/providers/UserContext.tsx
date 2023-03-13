@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -9,7 +9,6 @@ import { ModalContext } from "./ModalContext";
 import { IChildren, IUserContext } from "./types/Context";
 import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
 
-
 export const UserContext = createContext({} as IUserContext);
 
 export const UserProviders = ({ children }:IChildren) =>{
@@ -17,6 +16,13 @@ export const UserProviders = ({ children }:IChildren) =>{
   const { setModalStateRegister,setModalStateLogin } = useContext(ModalContext)
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("@OcuriosoToken:");
+    if (token) {
+      navigate("/dash");
+    }
+  }, []);
 
   const userLogin = async (formData: ILoginFormValues) => {
     try{
