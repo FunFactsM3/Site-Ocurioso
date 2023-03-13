@@ -42,7 +42,9 @@ export const ModalProviders = ({ children }: IChildren) => {
         openModalDash,
         setModalDash,
         changeRegistrationModeForLogin,
-        changeLoginModeForRegistration
+        changeLoginModeForRegistration,
+        setModalStateRegister,
+        setModalStateLogin,
       }}
     >
       {children}

@@ -25,6 +25,8 @@ export interface IUserContext{
 }
 
 export interface IModalContext {
+  setModalStateRegister: React.Dispatch<React.SetStateAction<boolean>>
+  setModalStateLogin: React.Dispatch<React.SetStateAction<boolean>>
   menuOpen: boolean;
   isModalLoginOpen: boolean;
   isModalRegisterOpen: boolean;
