@@ -4,15 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
-
-import {
-  IUserContext,
-  IChildren,
-  ILoginFormValues,
-  IRegisterFormValues,
-} from "./types/type";
-import { ILoginFormValues, IPosts, IRegisterFormValues } from "./types/Interface";
-
+import { ModalContext } from "./ModalContext";
+import { IChildren, IUserContext } from "./types/Context";
+import {  ILoginFormValues, IPosts, IRegisterFormValues } from "./types/Interface";
 
 export const UserContext = createContext({} as IUserContext);
 
@@ -22,7 +16,6 @@ export const UserProviders = ({ children }: IChildren) => {
   const [User, setUser] = useState<number>(1);
 
   const [searchValue,  setSearchValue] = useState("");
-  const [postList, setPostList] = useState<IPosts[]>([]);
   const [ result, setResult ] = useState<IPosts[]>([]);
 
   const { setModalStateRegister,setModalStateLogin } = useContext(ModalContext)
@@ -40,7 +33,7 @@ export const UserProviders = ({ children }: IChildren) => {
     try {
       const response = await Axios.post("/login", formData);
       toast.success('Login realizado com sucesso!');
-      const accessToken = response.data.accessToken;;
+      const accessToken = response.data.accessToken;
       localStorage.setItem("@OcuriosoToken:", accessToken);
 
       setUser(response.data.user.type);
@@ -77,8 +70,8 @@ export const UserProviders = ({ children }: IChildren) => {
   };
 
   const userLogout = () => {
-    localStorage.removeItem("@OcuriosoToken:');
-    localStorage.removeItem('@OcurisoTheme:");
+    localStorage.removeItem("@OcuriosoToken:");
+    localStorage.removeItem("@OcurisoTheme:");
     localStorage.removeItem("@USER");
     setLogado(false);
 
@@ -90,8 +83,12 @@ export const UserProviders = ({ children }: IChildren) => {
     <UserContext.Provider
       value={{ 
         userLogin,
-        userRegister, userLogout, searchValue,  setSearchValue, postList, setPostList, result, setResult,
+        userRegister, 
         userLogout,
+        searchValue,  
+        setSearchValue, 
+        result,
+        setResult,
         User,
         setLogado,
         Logado,

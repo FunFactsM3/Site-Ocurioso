@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { createContext } from "react";
 import { IChildren, IModalContext } from "./types/Context";
+import { IPosts } from "./types/Interface";
 
-import { IChildren, IModalContext, IPosts } from "./types/type";
 
 export const ModalContext = createContext({} as IModalContext);
 
@@ -11,6 +11,10 @@ export const ModalProviders = ({ children }: IChildren) => {
   const [isModalLoginOpen, setModalStateLogin] = useState(false);
   const [isModalRegisterOpen, setModalStateRegister] = useState(false);
   const [openModalDash, setModalDash] = useState(false);
+
+  const outsideRef = useRef(null);
+  const toggleModalLogin = () => setModalStateLogin(!isModalLoginOpen);
+  const toggleModalRegister = () => setModalStateRegister(!isModalRegisterOpen);
 
   const [Post, setPost] = useState<IPosts>({
     category: "",
@@ -21,21 +25,6 @@ export const ModalProviders = ({ children }: IChildren) => {
     src: "https://i.imgur.com/2Kxc0vW.jpg",
     title: "Ops, Ocorreu um erro, Feche o card e abra Novamente",
   });
-
-  const toggleModalLogin = () => setModalStateLogin(!isModalLoginOpen);
-  const toggleModalRegister = () => setModalStateRegister(!isModalRegisterOpen);
-
-  const outsideRef = useRef(null);
-
-  const changeRegistrationModeForLogin = () => {
-    setModalStateRegister(!isModalRegisterOpen);
-    setModalStateLogin(!isModalLoginOpen);
-  }; //TODO: Inverta á logica.
-
-  const changeLoginModeForRegistration = () => {
-    setModalStateRegister(isModalRegisterOpen);
-    setModalStateLogin(isModalLoginOpen);
-  }; //TODO: Inverta á logica.
 
   const handleCloseOnOverlay = (
     e: React.MouseEvent<HTMLElement, MouseEvent>
@@ -57,10 +46,8 @@ export const ModalProviders = ({ children }: IChildren) => {
         isModalLoginOpen,
         openModalDash,
         setModalDash,
-        changeRegistrationModeForLogin,
-        changeLoginModeForRegistration,
         setModalStateRegister,
-        setModalStateLogin,,
+        setModalStateLogin,
         setPost,
         Post,
       }}

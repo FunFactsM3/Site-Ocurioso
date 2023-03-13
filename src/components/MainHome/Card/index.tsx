@@ -2,19 +2,20 @@ import React, { useContext } from "react";
 import { DashContext } from "../../../providers/DashContext";
 import { ModalContext } from "../../../providers/ModalContext";
 import { IPosts } from "../../../providers/types/Interface";
-import axios from "../../../service/axios";
 import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
-type Post = {
-  item: IPosts
-}
+
+// type Post = {
+//   item: IPosts
+// }
 interface IPost2 {
   Post: IPosts;
 }
 
-export const Card = ({item}:Post{ Post }: IPost2) => {
+export const Card = ({ Post }: IPost2) => {
   const { setModalDash, setPost } = useContext(ModalContext);
 
     const { addPostToFavorit } = useContext(DashContext);
+    {console.log(Post)}
 
   return (
       <CardHomePageStyled>
@@ -41,3 +42,6 @@ export const Card = ({item}:Post{ Post }: IPost2) => {
   )
   
 };
+
+
+
