@@ -4,7 +4,7 @@ import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import { DashContext } from "../../providers/DashContext";
 import { Card } from "./Card";
-import { UlHomePageStyled } from "./style";
+import { UlHomePageStyled, Main} from "./style";
 
 export const MainHome = () => {
   const { searchValue } = useContext(UserContext)

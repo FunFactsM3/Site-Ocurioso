@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-//TODO: VAR COLOR
 export const ButtonCloseStyled = styled.button`
   width: auto; height: 36px;
   padding: 10px 8px;
@@ -157,9 +156,7 @@ export const ButtonRecord = styled.button`
 
 export const ButtonSearch = styled.button`
   width: 100%; height: 36px;
-  
   border-radius: 12px;
-  
   transition: .5s ease-out;
 
   background-color: ${({theme}) => theme.color.primaryGreen};

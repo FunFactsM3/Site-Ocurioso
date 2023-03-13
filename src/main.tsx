@@ -9,7 +9,6 @@ import { DashProviders } from "./providers/DashContext";
 import { ModalProviders } from './providers/ModalContext'
 import { SpeechProviders } from './providers/SpeechContext'
 import { UserProviders } from './providers/UserContext'
-
 import { GlobalStyles } from './styles/global'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

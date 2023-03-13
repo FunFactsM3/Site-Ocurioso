@@ -1,12 +1,8 @@
 import React from "react";
-
 import { AiFillAudio, AiOutlineArrowRight } from "react-icons/ai";
 import { BsFillRecordFill } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-
-
 import { IButton } from "../../providers/types/Interface";
-
 import { ButtonLoginStyled, ButtonOpenStyled, ButtonCloseStyled, ButtonRegisterStyled, ButtonModalCloseStyled, ButtonRecord, ButtonSearch } from "./style";
 
 export const ButtonCloseModal = ({toglle, text}:IButton) => (

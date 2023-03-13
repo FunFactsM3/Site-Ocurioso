@@ -6,8 +6,7 @@ interface IStyle {
 
 export const LoginPageStyled = styled.div`
   background-image: url("/src/assets/background.png");
-  background-position-y: -25px;
-  background-position-x: -25px;
+  background-position-y: -35px;
   background-size: cover;
   height: 100vh;
 
@@ -24,19 +23,15 @@ export const LoginPageStyled = styled.div`
   }
 
   @media screen and (min-width: 760px) {
-    background-image: url("/src/assets/background.png");
-    background-position-y: -30px;
-    background-position-x: -180px;
-    background-size: cover;
-    height: 100vh;
-
+    background: url("/src/assets/Ocurioso.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
   }
 
   @media screen and (min-width: 1000px) {
-    background-image: url("/src/assets/background.png");
+    background-image: url("/src/assets/Ocurioso.png") center center / cover no-repeat fixed;;
     background-size: 100%;
-    background-position-y: -115px;
-    background-position-x: 5px;
+    height: 100vh;
 
     h3{
       position: absolute;
@@ -44,7 +39,6 @@ export const LoginPageStyled = styled.div`
     }
     
   }
-
 
 `;
 
@@ -58,23 +52,28 @@ export const DivStyle = styled.div`
   justify-content: center;
 
   position: relative;
-  @media screen and (min-width: 1000px){
-    padding: 100px 0px 0px 0px;
-  }
+}
 `
 
 export const MainStyle = styled.main`
-  width: 90%; height:65%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
 
-  gap: 5px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
 
-  position: relative;
+    div{
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+      width: 90%;
+      align-items: flex-start;
+    }
 
   @media screen and (min-width: 600px) {
-    width: 350px; height: 400px;
+    width: 450px; height: 400px;
     margin-left: 20px;
     gap: 25px;
     display: flex;
@@ -83,10 +82,31 @@ export const MainStyle = styled.main`
     flex-direction: column;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 350px; height: 400px;
+    margin-left: 20px;
+    gap: 25px;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  
+  }
+
   @media screen and (min-width: 1000px) {
     width: 470px; height: 400px;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 50px;
 
+    gap: 25px;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 570px; height: 400px;
+    margin-left: 90px;
     gap: 25px;
     display: flex;
     align-self: flex-start;
@@ -137,16 +157,12 @@ export const TextTitleStyle = styled.p<IStyle>`
 
 export const SpaceButtonsStyle = styled.span`
   width: auto; height: 50px;
-
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center; 
 
   @media screen and (min-width: 1000px) {
-    width: 55%;
-    height: 50px;
-
     gap: 20px;
     display: flex;
     align-items: center;

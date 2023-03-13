@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
-
 import { motion } from "framer-motion";
-
 import FormLogin from "../Forms/FormLogin";
-
 import { FormStyle, ImageStyle, ModalAsideStyle, WrapperStyle } from "./style";
 import { ButtonCloseModal } from "../Buttons";
 import { ModalContext } from "../../providers/ModalContext";

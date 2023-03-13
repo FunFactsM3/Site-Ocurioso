@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import Axios from "../service/axios";
 import { ModalContext } from "./ModalContext";
 import { IChildren, IUserContext } from "./types/Context";

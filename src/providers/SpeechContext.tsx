@@ -1,7 +1,6 @@
 import React,{ createContext, useState } from "react";
 import { IChildren,  ISpeechContext } from "./types/Context";
 
-
 export const SpeechContext = createContext({} as ISpeechContext);
 
 export const SpeechProviders = ({ children }:IChildren) =>{

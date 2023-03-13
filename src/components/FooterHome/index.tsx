@@ -1,10 +1,11 @@
 import React from "react";
-import { FooterHomePageStyled } from "./style";
+import { FooterHomePageStyled, FooterContainer, FooterDiv  } from "./style";
 
 export const FooterHome = () => {
   return (
     <FooterHomePageStyled>
-      <div>
+    <FooterContainer>
+      <FooterDiv>
         <p>Bruno</p>
         <img src="src/assets/separador.png" alt="" />
         <p>Diego</p>
@@ -12,10 +13,11 @@ export const FooterHome = () => {
         <p>Gedson</p>
         <img src="src/assets/separador.png" alt="" />
         <p>Lívia</p>
-      </div>
+      </FooterDiv>
+    </FooterContainer>
       <div>
         <p>2023 | Ocurioso</p>
       </div>
-    </FooterHomePageStyled>
+  </FooterHomePageStyled>
   );
 };
