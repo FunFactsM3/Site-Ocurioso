@@ -1,9 +1,9 @@
 import React from "react";
 
-const FavoritePage = () => {  
-  return (
-    <h1>Register</h1>
-  )
-};
-
-export default FavoritePage;
+const Favorties = () => {
+ return (
+    <div>
+      <h1>Favorties</h1>
+    </div>
+  );
+}
