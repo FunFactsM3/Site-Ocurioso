@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { DashContext } from "../../providers/DashContext";
 import { IPosts } from "../../providers/types/type";
-import { UserContext } from "../../providers/UserContext";
 import { Card } from "./Card";
 import { UlHomePageStyled } from "./style";
 
 export const MainHome = () => {
-  const { PostsList, PostsFilter } = useContext(UserContext);
+  const { PostsFilter } = useContext(DashContext);
 
   return (
     <UlHomePageStyled>

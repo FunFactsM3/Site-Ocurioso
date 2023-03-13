@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { DashContext } from "../../../providers/DashContext";
 import { ModalContext } from "../../../providers/ModalContext";
 import { IPosts } from "../../../providers/types/type";
-import { UserContext } from "../../../providers/UserContext";
 import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
 
 interface IPost2 {
@@ -10,11 +10,7 @@ interface IPost2 {
 
 export const Card = ({ Post }: IPost2) => {
   const { setModalDash, setPost } = useContext(ModalContext);
-  const { addPostToFavorit } = useContext(UserContext);
-
-  function savepost() {
-    localStorage.setItem("@POST", JSON.stringify(Post));
-  }
+  const { addPostToFavorit } = useContext(DashContext);
 
   return (
     <>

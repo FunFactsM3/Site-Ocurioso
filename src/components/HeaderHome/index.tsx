@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { ModalContext } from "../../providers/ModalContext";
 import { Turn as Hamburger } from "hamburger-react";
 import { HeaderHomePageStyled } from "./style";
 import { UserContext } from "../../providers/UserContext";
-import Axios from "../../service/axios";
-import { toast } from "react-toastify";
+
+import { DashContext } from "../../providers/DashContext";
 
 export const HeaderHome = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);
   const { setValueSelect, ValueSelect, LoadPostsdata, favoritPage } =
-    useContext(UserContext);
+    useContext(DashContext);
   const { userLogout } = useContext(UserContext);
 
   const handleMenuToggle = () => {

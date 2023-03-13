@@ -7,8 +7,9 @@ import App from "./App";
 import { ModalProviders } from "./providers/ModalContext";
 import { UserProviders } from "./providers/UserContext";
 
-import { mainTheme, darkTheme } from "./styles/theme";
+import { mainTheme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
+import { DashProviders } from "./providers/DashContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -16,7 +17,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <ThemeProvider theme={mainTheme}>
         <ModalProviders>
           <UserProviders>
-            <App />
+            <DashProviders>
+              <App />
+            </DashProviders>
           </UserProviders>
         </ModalProviders>
       </ThemeProvider>

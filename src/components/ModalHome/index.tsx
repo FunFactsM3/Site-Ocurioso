@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import { string } from "yup";
+import { DashContext } from "../../providers/DashContext";
 import { ModalContext } from "../../providers/ModalContext";
-import { UserContext } from "../../providers/UserContext";
-import { IMGCardHomePageStyled } from "../MainHome/Card/style";
+
 import { IMGModalHomePageStyled, StyledModalHome } from "./style";
 
 export const ModalHome = () => {
   const { openModalDash, setModalDash, Post } = useContext(ModalContext);
-  const { addPostToFavorit } = useContext(UserContext);
+  const { addPostToFavorit } = useContext(DashContext);
 
   if (openModalDash) {
     return (

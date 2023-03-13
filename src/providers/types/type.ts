@@ -21,20 +21,8 @@ export interface IUserContext {
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
   userLogout: () => void;
   User: number;
-  setPostsList: React.Dispatch<React.SetStateAction<IPosts[]>>;
-  PostsList: IPosts[];
-  addPostToFavorit: (Post: IPosts) => void;
-  ValueSelect: {
-    type: string;
-  };
-  setValueSelect: React.Dispatch<
-    React.SetStateAction<{
-      type: string;
-    }>
-  >;
-  LoadPostsdata: (data: string) => void;
-  PostsFilter: IPosts[];
-  favoritPage: () => void;
+  setLogado: React.Dispatch<React.SetStateAction<boolean>>;
+  Logado: boolean;
 }
 
 export interface IModalContext {
@@ -68,4 +56,21 @@ export interface IPosts {
   content: string;
   category: string;
   minimunAge: string;
+}
+
+export interface IDashContext {
+  setPostsList: React.Dispatch<React.SetStateAction<IPosts[]>>;
+  PostsList: IPosts[];
+  addPostToFavorit: (Post: IPosts) => void;
+  ValueSelect: {
+    type: string;
+  };
+  setValueSelect: React.Dispatch<
+    React.SetStateAction<{
+      type: string;
+    }>
+  >;
+  LoadPostsdata: (data: string) => void;
+  PostsFilter: IPosts[];
+  favoritPage: () => void;
 }
