@@ -28,7 +28,6 @@ export type Header = {
   title: string;
 }
 
-
 export interface ModalProps {
   title: string;
   isOpen: boolean;

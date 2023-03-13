@@ -1,12 +1,9 @@
 import React from "react";
-
 import { ParagraphErrorStyle, StyledTextField, StyleInputPassword } from "./style";
-
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
-
 import { IPassword, ITextField} from "../../../providers/types/Interface";
 
 const InputDefault = ({label, error, type, auto, register}:ITextField) => (

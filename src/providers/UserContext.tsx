@@ -2,9 +2,7 @@ import React, { useContext, useState } from "react";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import Axios from "../service/axios";
-
 import { IChildren, IUserContext } from "./types/Context";
 import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
 

@@ -12,8 +12,9 @@ interface IStyledParagraphProps {
 
 export const HeaderStyled = styled.header`
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
   padding: 0 10px;
+  background: #2C2356;
 
   display: flex;
   align-items: center;
@@ -25,6 +26,20 @@ export const HeaderStyled = styled.header`
   .change{
     display: none !important;;
   }
+
+  img{
+    width: 120px;
+  }
+
+  div{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
   @media screen and (min-width: 1000px) {
     gap: 50px;
     display: flex;
@@ -36,11 +51,15 @@ export const HeaderStyled = styled.header`
     display: block !important;;
     }
     
-    img {
-      padding-right: 50%;
-    }
   }
 `;
+
+export const HeaderDiv = styled.nav`
+display: flex;
+justify-content: space-around;
+align-items: center;
+gap:10px;
+`
 
 export const HeaderFormStyle = styled.div`
   width: 100%;

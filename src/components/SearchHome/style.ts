@@ -1,28 +1,36 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+`
 export const SearchHomePageStyled = styled.nav`
-  height: 100px;
-
-  gap: 5px;
   display: flex;
   align-items: center;
   flex-direction: row;
+  background-color: rgb(246, 245, 244);
+  border-radius: 20px;
+  margin: 35px 10px;
+  font-family: Montserrat, sans-serif;
+  width: 90%;
   
   background-color:${({theme}) => theme.color.backgroundColorModal};
-
   border-radius: 20px;
 
   margin: 48px 16px;
 
-  font-family: "Montserrat", sans-serif;
   input {
     width: 50%; height: 40px;
-
-
-    padding: 0 0 0 5px;
-
+    padding: 0 0 0 10px;
     border: 1px solid #757575;
+    background-color: #F6F5F4;
     border-radius: 12px;
+    font-size: 12px;
+    color: #F6F5F4;
+    font-weight: 300;
   }
 
   input:focus {
@@ -30,6 +38,15 @@ export const SearchHomePageStyled = styled.nav`
     border: 1px solid #757575;
     border-radius: 12px;
     outline: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    justify-content: space-evenly;
   }
 
   @media (min-width: 1400px) {
@@ -40,9 +57,19 @@ export const SearchHomePageStyled = styled.nav`
 `;
 
 export const ImgStyle = styled.img`
-  width: 25%; height: 100%;
+  width: 91px;
+  height: 75px;
   padding: 10px 0;
 
+  @media (min-width: 768px) {
+    width: 110px;
+    height: 90px;
+  }
+
+  @media (min-width: 1023px) {
+    width: 130px;
+    height: 100px;
+  }
 `;
 
 export const ImgSearchStyled = styled.img`
@@ -58,16 +85,22 @@ export const ImgSearchStyled = styled.img`
   }
 `;
 export const DivStyle = styled.div`
-  width: 25%; height: 100%;
-  padding: 10px;
+    width: 25%;
+    padding: 10px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
 
-  gap: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    @media (min-width: 768px) {
+      width: 25%;
+      padding: 10px;
+      gap: 4px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
 `
-
 export const ImgMicStyled = styled.img`
   background-color: #e9425a;
   padding: 8px 18px;

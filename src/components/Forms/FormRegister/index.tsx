@@ -1,17 +1,11 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-
 import { yupResolver } from '@hookform/resolvers/yup';
-
 import { UserContext } from "../../../providers/UserContext";
 import { Header, IRegisterFormValues } from "../../../providers/types/Interface";
-
 import InputDefault, { InputPassword } from "../Input";
-
 import { FormRegisterStyle } from "./style";
-
 import { ButtonRegister } from "../../Buttons";
-
 import { schemaRegister } from "../../../validators/Validator";
 
 

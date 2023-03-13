@@ -3,7 +3,7 @@ import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import axios from "../../service/axios";
 import { Card } from "./Card";
-import { UlHomePageStyled } from "./style";
+import { UlHomePageStyled, Main} from "./style";
 
 export const MainHome = () => {
   const { searchValue,setSearchValue} = useContext(UserContext)
@@ -18,20 +18,20 @@ export const MainHome = () => {
   }
   
   return (
-    <UlHomePageStyled>
-     <>
-     {
-       searchValue === "nada"
-       ? console.log("renderização condicional")
-       : 
-        postList?.filter((item) => (item.title === searchValue || item.category === searchValue)(
-          <Card item={item}/>
-
-        )
-        )
-    
-     }
-     </>
-    </UlHomePageStyled>
+    <Main>
+      <UlHomePageStyled>
+        <>
+        {
+          searchValue === "nada"
+          ? console.log("renderização condicional")
+          : 
+            postList?.filter((item) => (item.title === searchValue || item.category === searchValue)(
+              <Card item={item}/>
+            )
+            )
+        }
+        </>
+      </UlHomePageStyled>
+    </Main>
   );
 };

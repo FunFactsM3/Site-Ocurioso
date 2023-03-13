@@ -1,23 +1,15 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-
 import { yupResolver } from '@hookform/resolvers/yup';
-
 import { FormLoginStyle } from "./style";
 import { StyledSpanDescription } from "./style";
-
 import InputDefault from "../Input";
 import { InputPassword } from "../Input";
-
 import { ButtonLogin, ButtonRegister } from "../../Buttons";
-
 import { UserContext } from "../../../providers/UserContext";
 import { ModalContext } from "../../../providers/ModalContext";
 import { Header, ILoginFormValues } from "../../../providers/types/Interface";
-
 import { schemaLogin } from "../../../validators/Validator";
-
-//TODO:passe todas interfaces para o types, tire h1 e coloque um styleComponents.
 
 
 const FormLogin = ({title}:Header) => {

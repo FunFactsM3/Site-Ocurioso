@@ -4,7 +4,6 @@ import DashBoardPage from "../pages/Home";
 import LoginPage from "../pages/Login";
 import FavoritePage from "../pages/Favorites";
 
-//TODO: Protected routes, AutoLogin.
 export default function Router (){
   return (
     <Routes>
