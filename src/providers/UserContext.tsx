@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
+import { ModalContext } from "./ModalContext";
 
 import { IChildren, IUserContext } from "./types/Context";
 import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
@@ -13,6 +14,7 @@ export const UserContext = createContext({} as IUserContext);
 
 export const UserProviders = ({ children }:IChildren) =>{
   const [searchValue,  setSearchValue] = useState("");
+  const { setModalStateRegister,setModalStateLogin } = useContext(ModalContext)
 
   const navigate = useNavigate();
 
@@ -35,10 +37,14 @@ export const UserProviders = ({ children }:IChildren) =>{
         const user = { ...formData, type: "young"}
         await Axios.post("/register",user)
         toast.success('Cadastrado com sucesso!');
+        setModalStateRegister(false)
+        setModalStateLogin(true)
       }else{
         const user = { ...formData, type: "kids"}
         await Axios.post("/register",user)
         toast.success('Cadastrado com sucesso!');
+        setModalStateRegister(false)
+        setModalStateLogin(true)
       }
     }catch(errors){
       console.log(errors)
