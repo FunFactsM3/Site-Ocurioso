@@ -44,6 +44,7 @@ export const CardHomePageStyled = styled.li`
     }
     img {
       margin: -7px;
+      cursor: pointer;
     }
   }
 

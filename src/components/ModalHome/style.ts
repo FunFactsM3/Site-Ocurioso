@@ -52,6 +52,7 @@ export const StyledModalHome = styled.div`
     }
     img {
       margin: -7px;
+      cursor: pointer;
     }
   }
 `;
