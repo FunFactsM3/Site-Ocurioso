@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { ModalContext } from "../../providers/ModalContext";
+import { ModalContext } from "../../../providers/ModalContext";
 import { Turn as Hamburger } from "hamburger-react";
 import { HeaderHomePageStyled } from "./style";
-import { UserContext } from "../../providers/UserContext";
+import { UserContext } from "../../../providers/UserContext";
 
-import { DashContext } from "../../providers/DashContext";
+import { DashContext } from "../../../providers/DashContext";
 
 export const HeaderHome = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);

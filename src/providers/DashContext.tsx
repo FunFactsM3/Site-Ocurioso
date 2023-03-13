@@ -98,7 +98,7 @@ export const DashProviders = ({ children }: IChildren) => {
   };
 
   const favoritPage = () => {
-    navigate("/Favorit");
+    navigate("/favorites");
   };
 
   return (
@@ -111,6 +111,7 @@ export const DashProviders = ({ children }: IChildren) => {
         setValueSelect,
         LoadPostsdata,
         PostsFilter,
+        PostsFavorits,
         favoritPage,
       }}
     >

@@ -9,8 +9,8 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
-      <Route path="/Favorit" element={<FavoritePage />} />
-      <Route path="/dash" element={<DashBoardPage />} />
+      <Route path="/home" element={<DashBoardPage />} />
+      <Route path="/favorites" element={<FavoritePage />} />
     </Routes>
   );
 }

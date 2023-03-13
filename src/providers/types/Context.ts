@@ -54,6 +54,7 @@ export interface IDashContext {
   >;
   LoadPostsdata: (data: string) => void;
   PostsFilter: IPosts[];
+  PostsFavorits: IPosts[]
   favoritPage: () => void;
 }
 export interface IChildren {

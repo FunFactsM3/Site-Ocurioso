@@ -25,7 +25,7 @@ export const UserProviders = ({ children }: IChildren) => {
   useEffect(() => {
     const token = localStorage.getItem("@OcuriosoToken:");
     if (token) {
-      navigate("/dash");
+      navigate("/home");
     }
   }, []);
 

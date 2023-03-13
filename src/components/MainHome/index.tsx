@@ -8,20 +8,6 @@ import { UlHomePageStyled } from "./style";
 
 export const MainHome = () => {
   const { searchValue } = useContext(UserContext)
-  // const [postList, setPostList] = useState<IPosts[]>([]);
-
-  //  useEffect(() => {
-  //   const renderCart = async () =>{
-  //     try {
-  //       const response = await axios.get('https://site-ocurioso.onrender.com/posts');
-  //       setPostList(response.data);  
-  //     } catch (error) {
-  //       console.error(error)
-  //     }
-  //   }
-  //   renderCart()
-  
-  // },[])
   const { PostsFilter } = useContext(DashContext);
 
   return (
@@ -42,13 +28,3 @@ export const MainHome = () => {
  }
 
 
-
-     // {PostsFilter.map((Post: IPosts) => (
-          //     <Card key={item.id} item={item} />
-          //   ));
-          // }
-
-
-     
-    //  <key={Post.id} Post={Post} />
-    //   ))}
