@@ -11,7 +11,6 @@ export const Card = ({item}:Post) => {
 
   
   return (
-    <>
       <CardHomePageStyled>
         <IMGCardHomePageStyled
           src="src/assets/IMGDesmatamento.png"
@@ -19,7 +18,7 @@ export const Card = ({item}:Post) => {
           onClick={() => setModalDash(true)}
         />
         <div>
-          <h3>{item.type}</h3>
+          <h3>{item.title}</h3>
           <p>
             Descrição da categoria de forma resumida, aumentei o texto para
             simular comportamentos na página
@@ -30,6 +29,6 @@ export const Card = ({item}:Post) => {
           </div>
         </div>
       </CardHomePageStyled>
-    </>
-  );
+  )
+  
 };

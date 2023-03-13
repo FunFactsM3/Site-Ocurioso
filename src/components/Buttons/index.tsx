@@ -1,4 +1,3 @@
-import { Switch } from "@mui/material";
 import React from "react";
 
 import { AiFillAudio, AiOutlineArrowRight } from "react-icons/ai";

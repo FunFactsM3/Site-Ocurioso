@@ -1,5 +1,5 @@
 import { DefaultThemes } from "styled-components";
-import { ILoginFormValues, IRegisterFormValues } from "./Interface";
+import { ILoginFormValues, IPosts, IRegisterFormValues } from "./Interface";
 
 export interface IDarkContext{
   theme: DefaultThemes,
@@ -16,7 +16,12 @@ export interface IUserContext{
   userLogout(): void;
   userRegister: (formData: IRegisterFormValues) => Promise<void>;
   searchValue: string;
+  postList: IPosts[];
+  result: IPosts[];
   setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+  setPostList: React.Dispatch<React.SetStateAction<IPosts[]>>;
+  setResult : React.Dispatch<React.SetStateAction<IPosts[]>>;
+
 }
 
 export interface IModalContext {

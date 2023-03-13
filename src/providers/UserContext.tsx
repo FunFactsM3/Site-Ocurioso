@@ -6,13 +6,16 @@ import { toast } from "react-toastify";
 import Axios from "../service/axios";
 
 import { IChildren, IUserContext } from "./types/Context";
-import { ILoginFormValues, IRegisterFormValues } from "./types/Interface";
+import { ILoginFormValues, IPosts, IRegisterFormValues } from "./types/Interface";
 
 
 export const UserContext = createContext({} as IUserContext);
 
 export const UserProviders = ({ children }:IChildren) =>{
   const [searchValue,  setSearchValue] = useState("");
+  const [postList, setPostList] = useState<IPosts[]>([]);
+  const [ result, setResult ] = useState<IPosts[]>([]);
+
 
   const navigate = useNavigate();
 
@@ -56,7 +59,7 @@ export const UserProviders = ({ children }:IChildren) =>{
   
   return (
     <UserContext.Provider 
-      value={{ userLogin, userRegister, userLogout,searchValue,  setSearchValue }}>
+      value={{ userLogin, userRegister, userLogout, searchValue,  setSearchValue, postList, setPostList, result, setResult}}>
       {children}
     </UserContext.Provider>
   );
