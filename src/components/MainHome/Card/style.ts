@@ -4,7 +4,7 @@ export const CardHomePageStyled = styled.li`
   width: 380px;
   max-width: 90%;
   min-width: 280px;
-  height: 480px;
+  height: 680px;
 
   background-color: ${({theme}) => theme.color.backgroundColorModal};
 
@@ -14,6 +14,7 @@ export const CardHomePageStyled = styled.li`
   justify-content: center;
 
   margin: 0 1rem 1rem 0;
+  position: relative;
 
   h3 {
     border-bottom: 1px solid #e0e0e0;
@@ -30,21 +31,32 @@ export const CardHomePageStyled = styled.li`
   div {
     margin: 1rem;
     align-items: center;
+    position: absolute;
+
+    bottom: 15px;
 
     span {
       color: #f6f5f4;
       background-color: #82d74d;
       padding: 5px 10px;
       border-radius: 100px;
-      margin: 1rem 3rem 0 0;
+      margin: 1rem 1rem 0 0;
     }
     img {
       margin: -7px;
+      cursor: pointer;
     }
+  }
+
+  @media (min-width: 1023px) {
+    height: 560px;
   }
 `;
 
 export const IMGCardHomePageStyled = styled.img`
   width: 100%;
   cursor: pointer;
+
+  border-radius: 20px 20px 0 0;
+  height: 200px;
 `;

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { DashContext } from "../../../providers/DashContext";
 import { ModalContext } from "../../../providers/ModalContext";
 import { IPosts } from "../../../providers/types/Interface";
 import axios from "../../../service/axios";
@@ -6,28 +7,36 @@ import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
 type Post = {
   item: IPosts
 }
-export const Card = ({item}:Post) => {
-  const { setModalDash } = useContext(ModalContext);
+interface IPost2 {
+  Post: IPosts;
+}
 
-  
+export const Card = ({item}:Post{ Post }: IPost2) => {
+  const { setModalDash, setPost } = useContext(ModalContext);
+
+    const { addPostToFavorit } = useContext(DashContext);
+
   return (
       <CardHomePageStyled>
         <IMGCardHomePageStyled
-          src="src/assets/IMGDesmatamento.png"
-          alt=""
-          onClick={() => setModalDash(true)}
+          src={Post.src.replace("Img:", "")}
+          alt={Post.title}
+          onClick={() => {
+            setModalDash(true), setPost(Post);
+          }}
         />
-        <div>
-          <h3>{item.title}</h3>
-          <p>
-            Descrição da categoria de forma resumida, aumentei o texto para
-            simular comportamentos na página
-          </p>
+        <section>
+          <h3>{Post.title}</h3>
+          <p>{Post.description}</p>
           <div>
-            <span>Categoria</span>
-            <img src="src/assets/coracao.png" alt="coracao" />
+            <span>{Post.category}</span>
+            <img
+              src="src/assets/coracao.png"
+              alt="coracao"
+              onClick={() => addPostToFavorit(Post)}
+            />
           </div>
-        </div>
+        </section>
       </CardHomePageStyled>
   )
   

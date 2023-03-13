@@ -4,14 +4,23 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
-import { ModalContext } from "./ModalContext";
 
-import { IChildren, IUserContext } from "./types/Context";
+import {
+  IUserContext,
+  IChildren,
+  ILoginFormValues,
+  IRegisterFormValues,
+} from "./types/type";
 import { ILoginFormValues, IPosts, IRegisterFormValues } from "./types/Interface";
+
 
 export const UserContext = createContext({} as IUserContext);
 
-export const UserProviders = ({ children }:IChildren) =>{
+export const UserProviders = ({ children }: IChildren) => {
+  const [Logado, setLogado] = useState(false);
+
+  const [User, setUser] = useState<number>(1);
+
   const [searchValue,  setSearchValue] = useState("");
   const [postList, setPostList] = useState<IPosts[]>([]);
   const [ result, setResult ] = useState<IPosts[]>([]);
@@ -28,14 +37,19 @@ export const UserProviders = ({ children }:IChildren) =>{
   }, []);
 
   const userLogin = async (formData: ILoginFormValues) => {
-    try{
-      const response = await Axios.post("/login",formData)
+    try {
+      const response = await Axios.post("/login", formData);
       toast.success('Login realizado com sucesso!');
-      const token = response.data.accessToken;
-      localStorage.setItem("@OcuriosoToken:",token)
-      navigate("/dash")
-    }catch(errors){
-      console.log(errors)
+      const accessToken = response.data.accessToken;;
+      localStorage.setItem("@OcuriosoToken:", accessToken);
+
+      setUser(response.data.user.type);
+      localStorage.setItem("@USER", response.data.user.type);
+      setLogado(true);
+
+      navigate("/dash");
+    } catch (errors) {
+      console.log(errors);
       toast.error('Reveja seu dados!');
     }
   };
@@ -63,16 +77,28 @@ export const UserProviders = ({ children }:IChildren) =>{
   };
 
   const userLogout = () => {
-    localStorage.removeItem('@OcuriosoToken:');
-    localStorage.removeItem('@OcurisoTheme:');
-    navigate('/');
+    localStorage.removeItem("@OcuriosoToken:');
+    localStorage.removeItem('@OcurisoTheme:");
+    localStorage.removeItem("@USER");
+    setLogado(false);
+
+    localStorage.removeItem("@Favorits");
+    navigate("/");
   };
 
-  
   return (
-    <UserContext.Provider 
-      value={{ userLogin, userRegister, userLogout, searchValue,  setSearchValue, postList, setPostList, result, setResult}}>
+    <UserContext.Provider
+      value={{ 
+        userLogin,
+        userRegister, userLogout, searchValue,  setSearchValue, postList, setPostList, result, setResult,
+        userLogout,
+        User,
+        setLogado,
+        Logado,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );
-}
+};
+

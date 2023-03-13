@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useContext } from "react";
 import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import axios from "../../service/axios";
+import { DashContext } from "../../providers/DashContext";
+import { IPosts } from "../../providers/types/type";
 import { Card } from "./Card";
 import { UlHomePageStyled } from "./style";
 
@@ -23,6 +25,8 @@ export const MainHome = () => {
     renderCart()
   
   },[]) // vem do Gedson
+  const { PostsFilter } = useContext(DashContext);
+
   return (
     <UlHomePageStyled>
      <>
@@ -32,11 +36,13 @@ export const MainHome = () => {
           <Card key={item.id} item={item} />
         ))
        : postList?.filter((item) => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.category.toLowerCase().includes(searchValue.toLowerCase()))).map((item) => (
-          <Card key={item.id} item={item} />
+          {PostsFilter.map((Post: IPosts) => (
+        <Card key={item.id} item={item} />
        ))
      }
      
-     </>
+     <key={Post.id} Post={Post} />
+      ))}
     </UlHomePageStyled>
   );
 };
