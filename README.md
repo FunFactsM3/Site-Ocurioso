@@ -2,7 +2,7 @@
 Projeto em grupo para a finalização do módulo 3 - React e TypeScript da Kenzie Academy Brasil
 
 <h3>Ocurioso</h3>
-<p> É um site educacional que concentra informações e fatos curiosos, que aguça a curiosidade e torna o aprendizado mais divertido para crianças. Trazendo maior atratividade para as crianças e segurança de acesso.</p>
+<p> É um site educacional que concentra informações e fatos curiosos. Aguça a curiosidade e torna o aprendizado mais divertido, trazendo maior atratividade para as crianças e segurança de acesso com relação ao conteúdo que pode ser consumido dentro da plataforma.</p>
 
 <h3>Vercel</h3>
 https://kenzie-fun-facts.vercel.app/
