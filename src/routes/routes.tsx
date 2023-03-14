@@ -1,16 +1,20 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom"
-import DashBoardPage from "../pages/DashBoardPage";
-import LoginPage from "../pages/LoginPage";
-import RegisterPage from "../pages/RegisterPage";
+import { Routes, Route } from "react-router-dom";
+import DashBoardPage from "../pages/Home";
+import LoginPage from "../pages/Login";
+import FavoritePage from "../pages/Favorites";
+import ProtectedRoutes from "../pages/Protected";
 
 //TODO: Protected routes, AutoLogin.
-export default function Router (){
+export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={ <LoginPage />} />
-      <Route path="/register" element={ <RegisterPage />} />
-      <Route path="/dash" element={ <DashBoardPage />} />
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/home" element={<ProtectedRoutes />}>
+        <Route index element={<DashBoardPage />} />
+      </Route>
+      <Route path="/favorites" element={<FavoritePage />} />
     </Routes>
+
   );
 }

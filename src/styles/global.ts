@@ -1,4 +1,4 @@
-import { createGloabalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
   *{
@@ -10,6 +10,9 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  input{
+    color: black;
+  }
   button{
     cursor: pointer;
   }
