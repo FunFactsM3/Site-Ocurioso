@@ -1,4 +1,4 @@
-# Kenzie-Aplicação-Ocurioso
+# Plataforma-Ocurioso
 Projeto em grupo para a finalização do *Módulo 3 - React e TypeScript* da Kenzie Academy Brasil
 
 <h3>Ocurioso</h3>
