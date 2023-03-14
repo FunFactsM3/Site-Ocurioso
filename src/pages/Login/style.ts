@@ -5,7 +5,7 @@ interface IStyle {
 }
 
 export const LoginPageStyled = styled.div`
-  background-image: url('https://i.imgur.com/1OXBUyP.png');
+  background-image: url('https://i.imgur.com/8OA4ccE.png');
   background-position-y: -35px;
   background-size: cover;
   height: 100vh;
