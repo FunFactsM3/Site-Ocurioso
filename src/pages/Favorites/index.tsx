@@ -5,6 +5,7 @@ import { FooterHome } from "../../components/FooterHome";
 import { ModalHome } from "../../components/ModalHome";
 import { MainFavor } from "../../components/MainFavor";
 import { Headerfavor } from "../../components/Header/HeaderFavo";
+import { Container } from "../Home/style";
 
 const FavortitesPage = () => {
 
@@ -13,7 +14,9 @@ const FavortitesPage = () => {
       <FavoPageStyled>
         <Headerfavor />
         <SearchHome />
-        <MainFavor />
+        <Container>
+          <MainFavor />
+        </Container>
         <FooterHome />
         <ModalHome />
       </FavoPageStyled>

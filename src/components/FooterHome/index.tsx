@@ -16,7 +16,7 @@ export const FooterHome = () => {
       </FooterDiv>
     </FooterContainer>
       <div>
-        <a href="">2023 | Ocurioso</a>
+        <a href="https://github.com/FunFactsM3/Kenzie-FunFacts/tree/develop">2023 | Ocurioso</a>
       </div>
   </FooterHomePageStyled>
   );
