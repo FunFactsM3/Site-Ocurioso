@@ -46,6 +46,7 @@ export const CardHomePageStyled = styled.li`
       margin: -7px;
       cursor: pointer;
     }
+   
   }
 
   @media (min-width: 1023px) {

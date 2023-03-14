@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import { DashContext } from "../../providers/DashContext";
-import { UlHomePageStyled } from "./style";
-import { Card } from "../MainHome/Card";
+import { StyledLine, StyledNull, UlHomePageStyled } from "./style";
+import { Card } from "./Card";
 
 export const MainFavor = () => {
   const { searchValue } = useContext(UserContext)
@@ -18,7 +18,13 @@ export const MainFavor = () => {
         ? PostsFavorits?.filter((Post:IPosts) => (Post.title.toLowerCase().includes(searchValue.toLowerCase()) || Post.category.toLowerCase().includes(searchValue.toLowerCase()))).map((Post:IPosts) => (
           <Card key={Post.id} Post={Post} />
         ))
-        : <h1>Nada</h1>
+        :<StyledNull>
+            <StyledLine>
+              <h1>Você ainda não adicionou curiosidades!</h1>
+            </StyledLine>
+        </StyledNull>
+
+
       }
       </>
     </UlHomePageStyled>

@@ -54,6 +54,7 @@ export interface IDashContext {
     }>
   >;
   LoadPostsdata: (data: string) => void;
+  remPostToFavorites: (post: IPosts) => void;
   PostsFilter: IPosts[];
   PostsFavorits: IPosts[]
   favoritPage: () => void;
