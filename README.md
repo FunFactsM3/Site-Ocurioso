@@ -7,5 +7,5 @@ Projeto em grupo para a finalização do módulo 3 - React e TypeScript da Kenzi
 <h3>Vercel</h3>
 https://kenzie-fun-facts.vercel.app/
 
-<Figma>
+<h3>Figma</h3>
 https://www.figma.com/file/INhhD6Y11RRoO4jzIXwq5k/Plataforma-Ocurioso-(Projeto-M3)?node-id=19%3A4202&t=sFexDoy3QQYrw7xU-1
