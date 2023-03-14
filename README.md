@@ -9,3 +9,6 @@ https://kenzie-fun-facts.vercel.app/
 
 <h3>Figma</h3>
 https://www.figma.com/file/INhhD6Y11RRoO4jzIXwq5k/Plataforma-Ocurioso-(Projeto-M3)?node-id=19%3A4202&t=sFexDoy3QQYrw7xU-1
+
+<h3>API</h3>
+https://github.com/FunFactsM3/API-Ocurioso
