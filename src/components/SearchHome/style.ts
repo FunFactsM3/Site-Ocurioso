@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+
 `
 export const SearchHomePageStyled = styled.nav`
   display: flex;
@@ -28,8 +28,11 @@ export const SearchHomePageStyled = styled.nav`
     border: 1px solid #757575;
     background-color: #F6F5F4;
     border-radius: 12px;
-    font-size: 12px;
-    color: #F6F5F4;
+
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    color: #BABABA;
     font-weight: 300;
   }
 

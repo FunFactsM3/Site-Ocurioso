@@ -8,8 +8,7 @@ export const Main = styled.main`
 `
 export const UlHomePageStyled = styled.ul`
   font-family: "Montserrat", sans-serif;
-
-  display: flex;
+ 
   overflow-x: auto;
 
   list-style-type: disc;
@@ -21,9 +20,19 @@ export const UlHomePageStyled = styled.ul`
 
   margin: 0 0 0 1rem;
 
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+
+
   @media (min-width: 769px) {
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;
+
+    width: 80%;
+    overflow-y: hidden;
+
+
   }
 `;

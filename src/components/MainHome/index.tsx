@@ -21,7 +21,7 @@ export const MainHome = () => {
         : PostsFilter?.filter((Post:IPosts) => (Post.title.toLowerCase().includes(searchValue.toLowerCase()) || Post.category.toLowerCase().includes(searchValue.toLowerCase()))).map((Post:IPosts) => (
           <Card key={Post.id} Post={Post} />
         ))
-      }
+    }
     </>
     </UlHomePageStyled>
   );

@@ -19,6 +19,7 @@ export const UserProviders = ({ children }: IChildren) => {
 
   const { setModalStateRegister,setModalStateLogin } = useContext(ModalContext)
 
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export const UserProviders = ({ children }: IChildren) => {
       localStorage.setItem("@USER", response.data.user.type);
       setLogado(true);
 
-      navigate("/dash");
+      navigate("/home");
     } catch (errors) {
       console.log(errors);
       toast.error('Reveja seu dados!');

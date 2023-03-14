@@ -13,6 +13,9 @@ export const ModalProviders = ({ children }: IChildren) => {
   const [openModalDash, setModalDash] = useState(false);
 
   const outsideRef = useRef(null);
+  
+  const changeRegistrationModeForLogin = () => { setModalStateRegister(!isModalRegisterOpen); setModalStateLogin(!isModalLoginOpen);} //TODO: Inverta á logica.
+
   const toggleModalLogin = () => setModalStateLogin(!isModalLoginOpen);
   const toggleModalRegister = () => setModalStateRegister(!isModalRegisterOpen);
 
@@ -50,6 +53,7 @@ export const ModalProviders = ({ children }: IChildren) => {
         setModalStateLogin,
         setPost,
         Post,
+        changeRegistrationModeForLogin
       }}
     >
       {children}

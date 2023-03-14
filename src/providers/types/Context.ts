@@ -33,6 +33,7 @@ export interface IModalContext {
   isModalRegisterOpen: boolean;
   toggleModalLogin: () => void;
   toggleModalRegister: () => void;
+  changeRegistrationModeForLogin: () => void;
   handleCloseOnOverlay: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   setPost: React.Dispatch<React.SetStateAction<IPosts>>;
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;

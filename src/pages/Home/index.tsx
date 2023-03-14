@@ -1,5 +1,5 @@
 import React from "react";
-import { HomePageStyled } from "./style";
+import { Container, HomePageStyled } from "./style";
 
 import { SearchHome } from "../../components/SearchHome";
 import { MainHome } from "../../components/MainHome";
@@ -14,7 +14,9 @@ const DashBoardPage = () => {
       <HomePageStyled>
         <HeaderHome />
         <SearchHome />
-        <MainHome />
+        <Container>
+          <MainHome />
+        </Container>
         <FooterHome />
         <ModalHome />
       </HomePageStyled>

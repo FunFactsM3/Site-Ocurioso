@@ -23,7 +23,7 @@ export const StyledTextField = styled(TextField)`
   label {
     &.Mui-focused {
       color: ${({theme}) => theme.color.primaryGreyDark};
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Montserrat", sans-serif;
     }
   }
 
@@ -37,8 +37,7 @@ export const StyledTextField = styled(TextField)`
   .css-1ff8729-MuiInputBase-root-MuiFilledInput-root::after{
     border: none!important;
   }
-`;
-
+`
 export const ParagraphErrorStyle = styled.p`
   color: ${({theme}) => theme.color.primaryRed} ;
   align-self: flex-start;
@@ -67,14 +66,20 @@ export const StyleInputPassword = styled(Input)`
   }
   input::placeholder{
     color: ${({theme}) => theme.color.primaryGreyDark};
+    font-family: "Montserrat", sans-serif;
+
     background-color: ${({theme}) => theme.color.backgroundColorInputs};
 
     padding: 0 10px;
   }
   .css-q0jhri-MuiInputBase-root-MuiInput-root{
     border-bottom: 1px solid ${({theme}) => theme.color.stroke};
+    color: ${({theme}) => theme.color.primaryGreyDark};
+
   }
   .css-78trlr-MuiButtonBase-root-MuiIconButton-root{
+    color: ${({theme}) => theme.color.primaryGreyDark};
+
     color: ${({theme}) => theme.color.backgroundColorInputs};
     border: 1px solid ${({theme}) => theme.color.backgroundColorInputs};
   }
@@ -84,4 +89,4 @@ export const StyleInputPassword = styled(Input)`
   ::before{
     border: none!important;
   }
-`;
+`

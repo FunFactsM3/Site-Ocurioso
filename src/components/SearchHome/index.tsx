@@ -36,9 +36,6 @@ export const SearchHome = () => {
           }
           <ButtonToSearch toglle={searchResult} />
         </DivStyle>
-        {/* {searchResults.map((result) =>(
-          <MainHome key={result} data={result}/>
-        ))} */}
       </SearchHomePageStyled>
     </Container>
   );

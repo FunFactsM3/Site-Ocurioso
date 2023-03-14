@@ -10,6 +10,9 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  input{
+    color: black;
+  }
   button{
     cursor: pointer;
   }

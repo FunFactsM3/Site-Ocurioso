@@ -52,7 +52,7 @@ export const DivStyle = styled.div`
   justify-content: center;
 
   position: relative;
-}
+
 `
 
 export const MainStyle = styled.main`

@@ -1,32 +1,36 @@
 import React, { useContext } from "react";
 import { ModalContext } from "../../../providers/ModalContext";
 import { Turn as Hamburger } from "hamburger-react";
-import { HeaderHomePageStyled } from "./style";
 import { UserContext } from "../../../providers/UserContext";
-
+import { BigContainer, HamburguerDiv, HeaderHomePageStyled, MiniContainer } from "./styles";
 import { DashContext } from "../../../providers/DashContext";
+import Title from "../../../assets/title.png";
+import { Link } from "react-router-dom";
+
 
 export const HeaderHome = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);
   const { setValueSelect, ValueSelect, LoadPostsdata, favoritPage } =
-    useContext(DashContext);
+  useContext(DashContext);
   const { userLogout } = useContext(UserContext);
-
+  
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
-
   const type = localStorage.getItem("@USER");
 
   if (type === "young") {
-    return (
-      <HeaderHomePageStyled>
-        <img src="src/assets/title.png" alt="Logo" />
-        <div>
-          <div className="menu-icon" onClick={handleMenuToggle}>
-            <Hamburger toggled={menuOpen} />
-          </div>
-          {menuOpen && (
+  
+  return (
+    <HeaderHomePageStyled>
+    <BigContainer>
+        <MiniContainer>
+        <img src={Title} alt="Logo" />
+          <HamburguerDiv>
+            <div className="menu-icon" onClick={handleMenuToggle}>
+              <Hamburger toggled={menuOpen} />
+            </div>
+            {menuOpen && (
             <nav className="menu">
               <select
                 value={ValueSelect.type}
@@ -49,28 +53,28 @@ export const HeaderHome = () => {
                   Terror e sobrenatural
                 </option>
               </select>
-              <button
-                onClick={() => {
-                  favoritPage();
-                }}
-              >
-                Favoritos
-              </button>
+              <Link to={"/favorites"} type="submit">Favoritos</Link>             
+
             </nav>
           )}
-        </div>
+          </HamburguerDiv>
+        </MiniContainer>
         <p onClick={userLogout}>Sair →</p>
-      </HeaderHomePageStyled>
-    );
-  } else {
+    </BigContainer>
+  </HeaderHomePageStyled>
+  )
+  }else{
+
     return (
       <HeaderHomePageStyled>
-        <img src="src/assets/title.png" alt="Logo" />
-        <div>
-          <div className="menu-icon" onClick={handleMenuToggle}>
-            <Hamburger toggled={menuOpen} />
-          </div>
-          {menuOpen && (
+      <BigContainer>
+          <MiniContainer>
+          <img src={Title} alt="Logo" />
+            <HamburguerDiv>
+              <div className="menu-icon" onClick={handleMenuToggle}>
+                <Hamburger toggled={menuOpen} />
+              </div>
+              {menuOpen && (
             <nav className="menu">
               <select
                 value={ValueSelect.type}
@@ -90,18 +94,15 @@ export const HeaderHome = () => {
                 <option value="História">História</option>
                 <option value="Mundo">Mundo</option>
               </select>
-              <button
-                onClick={() => {
-                  favoritPage();
-                }}
-              >
-                Favoritos
-              </button>
+              <Link to={"/favorites"} type="submit">Favoritos</Link>             
+
             </nav>
           )}
-        </div>
-        <p onClick={userLogout}>Sair →</p>
-      </HeaderHomePageStyled>
-    );
+            </HamburguerDiv>
+          </MiniContainer>
+          <p onClick={userLogout}>Sair →</p>
+      </BigContainer>
+    </HeaderHomePageStyled>
+    )
   }
 };
