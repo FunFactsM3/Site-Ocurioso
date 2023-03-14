@@ -20,6 +20,10 @@ export const DashProviders = ({ children }: IChildren) => {
     localPostsFavorits ? JSON.parse(localPostsFavorits) : []
   );
 
+  const remPostToFavorites = (post: IPosts) => {
+    const removeProduct = PostsFavorits.filter((products) => products.id !== post.id);
+    setPostsFavorits(removeProduct);
+  }
   const [ValueSelect, setValueSelect] = useState({ type: "Deslogado" });
   const [PostsFilter, setPostsFilter] = useState<IPosts[]>([]);
 
@@ -113,6 +117,7 @@ export const DashProviders = ({ children }: IChildren) => {
         PostsFilter,
         PostsFavorits,
         favoritPage,
+        remPostToFavorites
       }}
     >
       {children}

@@ -13,3 +13,4 @@ export const HomePageStyled = styled.div`
   background-size: cover;
   height: 100%;
 `;
+

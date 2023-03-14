@@ -3,19 +3,32 @@ import styled from "styled-components";
 
 export const StyledModalHome = styled.div`
   position: fixed;
-  top: 500px;
+  top: 400px;
   left: 50%;
   z-index:2;
   transform: translate(-50%, -50%);
 
   background-color: ${({theme}) => theme.color.backgroundColorModal};
 
-  width: 600px;
-  max-width: 90%;
+  /* width: 600px;
+  max-width: 90%; */
+  width: min(90%,500px);
+  height: 80%;
+
+  overflow-y: auto;
+
+  box-shadow: 0 0 20px 12px #6b52ab;
 
   font-family: "Montserrat", sans-serif;
   border-radius: 20px;
 
+  @media screen and (min-width: 1000px) {
+    overflow-y: hidden;
+    width: min(50%,650px);
+    height: auto;
+  }
+
+  
   button {
     position: absolute;
     right: 1rem;
@@ -39,6 +52,7 @@ export const StyledModalHome = styled.div`
     color:${({theme}) => theme.color.backgroudnColorTitle};
     margin: 1rem 1rem 1rem 2rem;
     font-size: 14px;
+    text-align: left;
   }
 
   div {
@@ -77,3 +91,9 @@ export const IMGModalHomePageStyled = styled.img`
     height: 370px;
   }
 `;
+
+export const WrapperStyle = styled.aside`
+  display: flex;
+  background-color: red;
+  width: 100%; height: 100%;
+`
