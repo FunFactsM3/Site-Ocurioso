@@ -5,6 +5,7 @@ export const Main = styled.main`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border: 1px solid green;
 `
 export const UlHomePageStyled = styled.ul`
   font-family: "Montserrat", sans-serif;

@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-
 import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import { DashContext } from "../../providers/DashContext";
 import { Card } from "./Card";
-import { UlHomePageStyled, Main} from "./style";
+import { UlHomePageStyled} from "./style";
+
+
+
 
 export const MainHome = () => {
   const { searchValue } = useContext(UserContext)
@@ -24,6 +26,8 @@ export const MainHome = () => {
     }
     </>
     </UlHomePageStyled>
+
+
   );
  }
 

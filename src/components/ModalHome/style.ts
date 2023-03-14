@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
+
 export const StyledModalHome = styled.div`
-  position: absolute;
-  top: 600px;
+  position: fixed;
+  top: 500px;
   left: 50%;
+  z-index:2;
   transform: translate(-50%, -50%);
 
   background-color: ${({theme}) => theme.color.backgroundColorModal};
@@ -18,12 +20,12 @@ export const StyledModalHome = styled.div`
     position: absolute;
     right: 1rem;
     top: 1rem;
-
     padding: 10px;
-    color: #757575;
-
-    background-color: #e0e0e0 50%;
+    color: rgb(117, 117, 117);
+    opacity: 0.7;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
   }
 
   h3 {

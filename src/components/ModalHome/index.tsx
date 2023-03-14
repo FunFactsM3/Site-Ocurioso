@@ -10,6 +10,7 @@ export const ModalHome = () => {
 
   if (openModalDash) {
     return (
+    
       <StyledModalHome>
         <IMGModalHomePageStyled src={Post.src.replace("Img:", "")} alt="" />
         <button onClick={() => setModalDash(false)}>X</button>
@@ -27,6 +28,7 @@ export const ModalHome = () => {
           </div>
         </>
       </StyledModalHome>
+
     );
   }
 
