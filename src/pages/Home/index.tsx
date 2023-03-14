@@ -18,7 +18,6 @@ const DashBoardPage = () => {
           <MainHome />
         </Container>
         <FooterHome />
-  
         <ModalHome />
       </HomePageStyled>
     </>

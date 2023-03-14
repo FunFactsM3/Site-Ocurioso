@@ -46,6 +46,8 @@ export const StyledModalHome = styled.div`
     margin: 1rem 1rem 1rem 2rem;
     font-size: 26px;
     padding: 0 0 1rem 0;
+    color: ${({theme}) => theme.color.backgroudnColorTitle};
+
   }
 
   p {

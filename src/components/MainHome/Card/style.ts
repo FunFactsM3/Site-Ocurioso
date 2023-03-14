@@ -17,6 +17,8 @@ export const CardHomePageStyled = styled.li`
   position: relative;
 
   h3 {
+    color: ${({theme}) => theme.color.backgroudnColorTitle};
+
     border-bottom: 1px solid #e0e0e0;
     margin: 1rem;
     font-size: 26px;
