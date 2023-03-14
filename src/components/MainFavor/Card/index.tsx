@@ -11,8 +11,7 @@ interface IPost2 {
 export const Card = ({ Post }: IPost2) => {
   const { setModalDash, setPost } = useContext(ModalContext);
 
-    const { addPostToFavorit } = useContext(DashContext);
-    {console.log(Post)}
+    const { remPostToFavorites } = useContext(DashContext);
 
   return (
       <CardHomePageStyled>
@@ -31,7 +30,7 @@ export const Card = ({ Post }: IPost2) => {
             <img
               src="src/assets/coracao.png"
               alt="coracao"
-              onClick={() => addPostToFavorit(Post)}
+              onClick={() => remPostToFavorites(Post)}
             />
           </div>
         </section>

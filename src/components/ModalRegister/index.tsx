@@ -14,7 +14,7 @@ const ModalRegister = () => {
         <ModalAsideStyle>
           <ButtonCloseModal text="X" toglle={toggleModalRegister}/>
           <ImageStyle>
-            <img src="src/assets/spaceImage.png" alt="" />
+            <img src="https://i.giphy.com/media/J689VE0Tlk6m2dgPen/giphy.webp" alt="Logo" />
           </ImageStyle>
           <FormStyle>
             <FormRegister title="Cadastro" />

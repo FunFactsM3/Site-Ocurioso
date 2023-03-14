@@ -19,6 +19,9 @@ export const UlHomePageStyled = styled.ul`
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;
+
+    width: 80%;
+
   }
 `;
 

@@ -6,17 +6,17 @@ export const FooterHome = () => {
     <FooterHomePageStyled>
     <FooterContainer>
       <FooterDiv>
-        <p>Bruno</p>
+        <a href="https://www.linkedin.com/in/bruno-abreu-903185226/">Bruno</a>
         <img src="src/assets/separador.png" alt="" />
-        <p>Diego</p>
+        <a href="https://www.linkedin.com/in/diegocarvalhodev/">Diego</a>
         <img src="src/assets/separador.png" alt="" />
-        <p>Gedson</p>
+        <a href="https://www.linkedin.com/in/gedson-candido-a82428180/">Gedson</a>
         <img src="src/assets/separador.png" alt="" />
-        <p>Lívia</p>
+        <a href="https://www.linkedin.com/in/livia-melo/" >Lívia</a>
       </FooterDiv>
     </FooterContainer>
       <div>
-        <p>2023 | Ocurioso</p>
+        <a href="https://github.com/FunFactsM3/Kenzie-FunFacts/tree/develop">2023 | Ocurioso</a>
       </div>
   </FooterHomePageStyled>
   );

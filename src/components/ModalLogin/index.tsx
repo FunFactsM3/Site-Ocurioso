@@ -14,7 +14,7 @@ const ModalLogin = () => {
         <ModalAsideStyle>
           <ButtonCloseModal text="X" toglle={toggleModalLogin}/>
           <ImageStyle>
-            <img src="src/assets/spaceImage.png" alt="" />
+            <img src="https://media1.giphy.com/media/xIdh4ky0fOnkU5K82L/giphy.gif?cid=ecf05e474it2xvxgn9af6bbge9oim93cdl8lr12u4li91ixt&rid=giphy.gif&ct=g" alt="Logo" />
           </ImageStyle>
           <FormStyle>
             <FormLogin title="Login"/>
