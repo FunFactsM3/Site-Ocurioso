@@ -5,7 +5,7 @@ interface IStyle {
 }
 
 export const LoginPageStyled = styled.div`
-  background-image: url("/src/assets/background.png");
+  background-image: url('https://i.imgur.com/8OA4ccE.png');
   background-position-y: -35px;
   background-size: cover;
   height: 100vh;
@@ -23,13 +23,13 @@ export const LoginPageStyled = styled.div`
   }
 
   @media screen and (min-width: 760px) {
-    background: url("/src/assets/Ocurioso.png") no-repeat center center fixed;
+    background: url("https://i.imgur.com/1OXBUyP.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   }
 
   @media screen and (min-width: 1000px) {
-    background-image: url("/src/assets/Ocurioso.png") center center / cover no-repeat fixed;;
+    background-image: url("https://i.imgur.com/1OXBUyP.png") center center / cover no-repeat fixed;;
     background-size: 100%;
     height: 100vh;
 

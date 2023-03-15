@@ -5,7 +5,7 @@ import LoginPage from "../pages/Login";
 import FavoritePage from "../pages/Favorites";
 import ProtectedRoutes from "../pages/Protected";
 
-//TODO: Protected routes, AutoLogin.
+
 export default function Router() {
   return (
     <Routes>

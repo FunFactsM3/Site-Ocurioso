@@ -28,7 +28,7 @@ export const Card = ({ Post }: IPost2) => {
           <div>
             <span>{Post.category}</span>
             <img
-              src="src/assets/coracao.png"
+              src="https://i.imgur.com/0XFmm1w.png"
               alt="coracao"
               onClick={() => remPostToFavorites(Post)}
             />

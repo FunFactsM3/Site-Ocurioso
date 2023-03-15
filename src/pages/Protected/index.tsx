@@ -5,7 +5,7 @@ const ProtectedRoutes = () => {
   const token = localStorage.getItem("@OcuriosoToken:")
   return (
     <>
-      {token ? <Outlet/> : <Navigate to='/' />}
+      {token ? <Outlet/> : <Navigate to='' />}
     </>
   );
 

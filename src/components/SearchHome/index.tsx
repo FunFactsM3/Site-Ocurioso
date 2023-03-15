@@ -22,7 +22,7 @@ export const SearchHome = () => {
   return (
     <Container>
       <SearchHomePageStyled>
-        <ImgStyle src={!listening ? "src/assets/mundo 1.png" : "https://www.upshow.tv/wp-content/uploads/2022/08/Waveform.gif " } alt="" />
+        <ImgStyle src={!listening ? "https://i.imgur.com/szMfkAy.png" : "https://www.upshow.tv/wp-content/uploads/2022/08/Waveform.gif " } alt="" />
         {
           listening 
           ? <input placeholder="Pesquise aqui" type="text" value={transcript} /> 
