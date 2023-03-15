@@ -64,7 +64,7 @@ export const HamburguerDiv = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background: #FFFFFF;
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
     padding: 7px 7px;
     gap:5px;
     font-family: Montserrat, sans-serif;
@@ -90,21 +90,23 @@ export const HamburguerDiv = styled.div`
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        background: #FFFFFF;
+        background-color: ${({theme}) => theme.color.backgroundColorModal};
         padding: 7px 7px;
         gap:5px;
-        font-family: Montserrat, sans-serif;
+        font-family: "Montserrat", sans-serif;
         width: 200px;
         height:100px;
     }
         select {
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
+          background-color:${({theme}) => theme.color.backgroundColorModal};
           border-radius: 10px;
           cursor: pointer;
+          font-family: "Montserrat", sans-serif;
           font-size: 18px;
         }
         a{
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
           cursor: pointer;
           font-family: "Montserrat", sans-serif;
           font-size: 18px;

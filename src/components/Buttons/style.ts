@@ -75,6 +75,53 @@ export const ButtonOpenStyled = styled.button`
   }}
 `;
 
+export const ButtonRedHeart = styled.button`
+  color: pink;
+  animation: like 1s ;
+  animation-fill-mode: both;
+  background-color: transparent;
+  font-size: 15px;
+
+  @keyframes like {
+    0%{
+      color: pink;
+      transform: scale(0.8)
+    }
+    50%{
+      color: purple;
+      transform: scale(1.8)
+    }
+    100%{
+      color: pink;
+      transform: scale(1.4)
+    }
+    
+  }
+`
+export const ButtonBlackHeart = styled.button`
+  color: red;
+  animation: deslike 1s ;
+  animation-fill-mode: both;
+  background-color: transparent;
+  font-size: 15px;
+
+  @keyframes deslike {
+    0%{
+      color: pink;
+      transform: scale(0.8)
+    }
+    50%{
+      color: purple;
+      transform: scale(1.8)
+    }
+    100%{
+      color: pink;
+      transform: scale(1.4)
+    }
+    
+  }
+`
+
 export const ButtonLoginStyled = styled.button`
   width: 100%; height: 36px;
 

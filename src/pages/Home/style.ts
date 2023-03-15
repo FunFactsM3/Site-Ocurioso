@@ -12,5 +12,6 @@ export const HomePageStyled = styled.div`
   background: url("https://i.imgur.com/QwoYsmU.png") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
+  position: relative;
 `;
 

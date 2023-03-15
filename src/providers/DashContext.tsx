@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
+import usePersistedState from "../utils/usePersistedState";
 import { IChildren, IDashContext } from "./types/Context";
 import { IPosts } from "./types/Interface";
 
@@ -14,24 +15,53 @@ export const DashContext = createContext({} as IDashContext);
 
 export const DashProviders = ({ children }: IChildren) => {
   const localPostsFavorits = localStorage.getItem("@Favorits");
+  const type = localStorage.getItem("@USER");
 
+  const [ValueSelect, setValueSelect] = useState({ type: "Deslogado" });
+  const [PostsFilter, setPostsFilter] = useState<IPosts[]>([]);
   const [PostsList, setPostsList] = useState<IPosts[]>([]);
   const [PostsFavorits, setPostsFavorits] = useState<IPosts[]>(
     localPostsFavorits ? JSON.parse(localPostsFavorits) : []
   );
 
-  const remPostToFavorites = (post: IPosts) => {
-    const removeProduct = PostsFavorits.filter((products) => products.id !== post.id);
-    setPostsFavorits(removeProduct);
-  }
-  const [ValueSelect, setValueSelect] = useState({ type: "Deslogado" });
-  const [PostsFilter, setPostsFilter] = useState<IPosts[]>([]);
-
   const { Logado } = useContext(UserContext);
 
   const navigate = useNavigate();
 
-  //Renderização
+  const remPostToFavorites = (post: IPosts) => {
+    const removeProduct = PostsFavorits.filter((products) => products.id !== post.id);
+    setPostsFavorits(removeProduct);
+    toast.success(`${post.title}, foi removido com sucesso.`);
+  }
+  
+  const addPostToFavorit = (Post: IPosts) => {
+    const index = PostsFavorits.findIndex((val) => val.id === Post.id);
+
+    if (index < 0) {
+      setPostsFavorits([...PostsFavorits, Post]);
+    toast.success(`${Post.title}, foi adicionado com sucesso.`);
+    } else {
+      toast.warning(`Post já está na Lista de Favoritos`);
+    }
+  };
+
+  const LoadPostsdata = (data: string) => {
+    if (type === "young") {
+      if (data === "") {
+        setPostsFilter(PostsList);
+      } else {
+        const filteredList = PostsList.filter((Post) => Post.category === data);
+        setPostsFilter(filteredList);
+      }
+    } else {
+      if (data === "") {
+        setPostsFilter(PostsList);
+      } else {
+        const filteredList = PostsList.filter((Post) => Post.category === data);
+        setPostsFilter(filteredList);
+      }
+    }
+  };
 
   useEffect(() => {
     const type = localStorage.getItem("@USER");
@@ -66,41 +96,11 @@ export const DashProviders = ({ children }: IChildren) => {
     localStorage.setItem("@Favorits", JSON.stringify(PostsFavorits));
   }, [PostsFavorits]);
 
-  const addPostToFavorit = (Post: IPosts) => {
-    const index = PostsFavorits.findIndex((val) => val.id === Post.id);
-
-    if (index < 0) {
-      setPostsFavorits([...PostsFavorits, Post]);
-      toast.success("Post adicionado à Lista de Favoritos com sucesso");
-    } else {
-      toast.warning(`Post já está na Lista de Favoritos`);
-    }
-  };
-
-  const type = localStorage.getItem("@USER");
-
   useEffect(() => {
     LoadPostsdata(`${ValueSelect.type}`);
   }, [ValueSelect]);
 
-  const LoadPostsdata = (data: string) => {
-    if (type === "young") {
-      if (data === "") {
-        setPostsFilter(PostsList);
-      } else {
-        const filteredList = PostsList.filter((Post) => Post.category === data);
-        setPostsFilter(filteredList);
-      }
-    } else {
-      if (data === "") {
-        setPostsFilter(PostsList);
-      } else {
-        const filteredList = PostsList.filter((Post) => Post.category === data);
-        setPostsFilter(filteredList);
-      }
-    }
-  };
-
+  
   const favoritPage = () => {
     navigate("/favorites");
   };
@@ -117,7 +117,8 @@ export const DashProviders = ({ children }: IChildren) => {
         PostsFilter,
         PostsFavorits,
         favoritPage,
-        remPostToFavorites
+        remPostToFavorites,
+        setPostsFavorits
       }}
     >
       {children}

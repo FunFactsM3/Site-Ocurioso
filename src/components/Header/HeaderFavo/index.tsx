@@ -55,7 +55,7 @@ export const Headerfavor = () => {
                   Terror e sobrenatural
                 </option>
               </select>
-              <Link to={"/home"} type="submit">Home</Link>             
+              <Link to={"/home" } type="submit">Home</Link>             
             </nav>
           )}
           </HamburguerDiv>
@@ -94,8 +94,8 @@ export const Headerfavor = () => {
                 <option value="Entretenimento">Entretenimento</option>
                 <option value="História">História</option>
                 <option value="Mundo">Mundo</option>
-              </select>
-              <Link to={"/home"} type="submit">Home</Link>             
+              </select> 
+              {/* <Link to={"/home"} type="submit">Home</Link>              */}
             </nav>
           )}
             </HamburguerDiv>

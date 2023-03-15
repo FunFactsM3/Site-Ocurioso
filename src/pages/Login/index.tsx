@@ -31,7 +31,7 @@ const LoginPage = () => {
         </DivStyle>
         { isModalLoginOpen ? <ModalLogin /> : null }
         { isModalRegisterOpen ? <ModalRegister /> : null }
-        <h3>2022 / Ocurioso</h3>
+        <h3>2023 | Ocurioso</h3>
       </LoginPageStyled>
     </>
   );

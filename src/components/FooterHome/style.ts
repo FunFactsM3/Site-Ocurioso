@@ -6,20 +6,24 @@ export const FooterHomePageStyled = styled.footer`
   justify-content: center;
   align-items: center;
   height: 122px;
+  width: 100%;
   /* margin: 10rem 0 0 0; */
   background-color: #e0e0e0;
   font-family: "Montserrat", sans-serif;
   gap:10px;
 
+ 
   p{
     font-size:14px;
   }
   @media (min-width: 1023px) {
-    margin: 7rem 0 0 0;
+    margin: 10rem 0 0 0;
+  
   }
 
   @media (min-width: 1300px) {
     margin: 9rem 0 0 0;
+   
   } 
 
    @media (min-width: 1400px) {

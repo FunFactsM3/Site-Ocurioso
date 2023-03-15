@@ -1,21 +1,18 @@
 import React, { useContext } from "react";
-import { DashContext } from "../../../providers/DashContext";
+
 import { ModalContext } from "../../../providers/ModalContext";
 import { IPosts } from "../../../providers/types/Interface";
-import { CardHomePageStyled, IMGCardHomePageStyled } from "./style";
 
-// type Post = {
-//   item: IPosts
-// }
+import { IconHeart } from "../../Buttons";
+
+import { CardHomePageStyled, IMGCardHomePageStyled, SpanStyled } from "./style";
+
 interface IPost2 {
   Post: IPosts;
 }
 
 export const Card = ({ Post }: IPost2) => {
   const { setModalDash, setPost } = useContext(ModalContext);
-
-    const { addPostToFavorit } = useContext(DashContext);
-    {console.log(Post)}
 
   return (
       <CardHomePageStyled>
@@ -30,12 +27,8 @@ export const Card = ({ Post }: IPost2) => {
           <h3>{Post.title}</h3>
           <p>{Post.description}</p>
           <div>
-            <span>{Post.category}</span>
-            <img
-              src="https://i.imgur.com/0XFmm1w.png"
-              alt="coracao"
-              onClick={() => addPostToFavorit(Post)}
-            />
+            <SpanStyled>{Post.category}</SpanStyled>
+            <IconHeart Post={Post} />
           </div>
         </section>
       </CardHomePageStyled>

@@ -31,9 +31,9 @@ export const UlHomePageStyled = styled.ul`
     overflow: none;
     justify-content: center;
 
-    width: 80%;
+    height: auto; width: 80%;
+    margin-bottom: 210px;
+
     overflow-y: hidden;
-
-
   }
 `;

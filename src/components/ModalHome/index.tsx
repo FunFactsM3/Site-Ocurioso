@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DashContext } from "../../providers/DashContext";
 import { ModalContext } from "../../providers/ModalContext";
+import { IconHeart } from "../Buttons";
 
 import { IMGModalHomePageStyled, StyledModalHome } from "./style";
 
@@ -20,11 +21,7 @@ export const ModalHome = () => {
           <p>{Post.content}</p>
           <div>
             <span>{Post.category}</span>
-            <img
-              src="https://i.imgur.com/0XFmm1w.png"
-              alt="coracao"
-              onClick={() => addPostToFavorit(Post)}
-            />
+            {/* <IconHeart Post={Post} /> */}
           </div>
         </>
       </StyledModalHome>

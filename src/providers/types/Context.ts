@@ -58,6 +58,8 @@ export interface IDashContext {
   PostsFilter: IPosts[];
   PostsFavorits: IPosts[]
   favoritPage: () => void;
+ 
+  setPostsFavorits: React.Dispatch<React.SetStateAction<IPosts[]>>
 }
 export interface IChildren {
   children: React.ReactNode;
