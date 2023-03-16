@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FavoPageStyled = styled.div`
   background: url("https://i.imgur.com/QwoYsmU.png") no-repeat center center fixed;
   background-size: cover;
-  height: auto;
+  height: 100vh;
 
   gap: 28px;
   display: flex;

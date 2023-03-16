@@ -18,7 +18,6 @@ export const UlHomePageStyled = styled.ul`
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
-
   margin: 0 0 0 1rem;
 
   gap: 10px;
@@ -26,7 +25,7 @@ export const UlHomePageStyled = styled.ul`
   flex-direction: row;
 
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;

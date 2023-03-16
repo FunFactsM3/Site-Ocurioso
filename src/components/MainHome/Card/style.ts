@@ -28,6 +28,7 @@ export const CardHomePageStyled = styled.li`
   p {
     color: ${({theme}) => theme.color.backgroudnColorTitle};
     margin: 1rem 1rem 3rem 1rem;
+    text-align: justify;
   }
 
   div {
