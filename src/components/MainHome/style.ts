@@ -37,3 +37,39 @@ export const UlHomePageStyled = styled.ul`
     overflow-y: hidden;
   }
 `;
+export const StyledNull = styled.div`
+    width: 80vw; height: auto;
+    padding:  20px; margin-bottom: 10px;
+
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color:${({theme}) => theme.color.backgroundColorModal};
+    border-radius: 14px;
+
+    h1{
+      color:${({theme}) => theme.color.backgroudnColorTitle};
+      font-size: 15px;
+      border-bottom: 1px;
+    }
+
+@media (min-width: 768px){
+    width: 80vw; height: 15vh;
+    padding: 0 20px;
+
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+`
+
+export const StyledLine = styled.div`
+  width: 100%; height: 1px;
+
+  background-color: #757575;
+`
