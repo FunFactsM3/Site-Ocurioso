@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Axios from "../service/axios";
-import usePersistedState from "../utils/usePersistedState";
+
 import { IChildren, IDashContext } from "./types/Context";
 import { IPosts } from "./types/Interface";
 
-// import { IChildren, IPosts, IDashContext } from "./types/type";
 import { UserContext } from "./UserContext";
 
 export const DashContext = createContext({} as IDashContext);
