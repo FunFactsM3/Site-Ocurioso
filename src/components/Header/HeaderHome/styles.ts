@@ -20,6 +20,7 @@ export const HeaderHomePageStyled = styled.header`
       box-shadow: 0 0 0 0;
       border: 0 none;
       outline: 0;
+      
   }
   button {
       color: #757575;
@@ -50,6 +51,8 @@ export const MiniContainer = styled.div`
   height: 100px;
 
   select{
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
+
     font-family: Montserrat, sans-serif;
     font-size: 18px;
   }
@@ -73,13 +76,13 @@ export const HamburguerDiv = styled.div`
   }
   
     select {
-      color: #757575;
+      color:${({theme}) => theme.color.backgroudnColorTitle};
       border-radius: 10px;
       cursor: pointer;
       font-size: 13px;
     }
     a{
-      color: #757575;
+      color:${({theme}) => theme.color.backgroudnColorTitle};
       cursor: pointer;
       font-family: "Montserrat", sans-serif;
       font-size: 13px;
