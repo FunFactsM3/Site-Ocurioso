@@ -6,12 +6,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   overflow-y: auto;
-
 `
 export const HomePageStyled = styled.div`
   background: url("https://i.imgur.com/QwoYsmU.png") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: relative;
-`;
-
+`;   

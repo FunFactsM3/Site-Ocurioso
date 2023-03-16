@@ -11,7 +11,8 @@ export const FooterHomePageStyled = styled.footer`
   background-color: #e0e0e0;
   font-family: "Montserrat", sans-serif;
   gap:10px;
-
+  position:absolute;
+  bottom:0;
  
   p{
     font-size:14px;

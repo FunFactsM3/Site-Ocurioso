@@ -89,6 +89,7 @@ export const HamburguerDiv = styled.div`
       padding-left:3px;
     }
     @media (min-width: 768px) {
+      display:none;
       nav {
         display: flex;
         flex-direction: column;
@@ -116,4 +117,43 @@ export const HamburguerDiv = styled.div`
           padding-left:3px;
         }
     }
+`
+
+export const HamburguerDesktop = styled.nav`
+  display: none;
+  flex-direction: row;
+  align-itens: center;
+
+  @media (min-width: 768px){
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: flex-start;
+    gap: 15px;
+
+
+    select {
+      color: white;
+      background: transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      height: 50%;
+      width: 115px;
+      option{
+        background-color: rgb(44, 35, 86);
+        padding-right:50px;
+      }
+    }
+    a{
+      color: white;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      padding-left:3px;
+      font-size:16px;
+    }
+  }
+
 `
