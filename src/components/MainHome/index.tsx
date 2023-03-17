@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { IPosts } from "../../providers/types/Interface";
 import { UserContext } from "../../providers/UserContext";
 import { DashContext } from "../../providers/DashContext";
+
 import { Card } from "./Card";
+
 import { UlHomePageStyled} from "./style";
 import { StyledLine, StyledNull } from "./style";
+
 import { Decrypt } from "../../utils/Encryptor";
 
 
@@ -17,7 +20,7 @@ export const MainHome = () => {
   
   const name = localStorage.getItem("@CuriosoName:") || 'D3VFR0N7'
 
-  const a = () => {
+  const renderCards = () => {
     if(searchValue.length === 0){
       return (
         PostsFilter?.map((Post:IPosts) => (
@@ -47,15 +50,8 @@ export const MainHome = () => {
     <UlHomePageStyled>
       <>
       {
-        // searchValue.length === 0
-        // ? PostsFilter?.map((Post:IPosts) => (
-        //   <Card key={Post.id} Post={Post} />
-        // ))
-        // : PostsFilter?.filter((Post:IPosts) => (Post.title.toLowerCase().includes(searchValue.toLowerCase()) || Post.category.toLowerCase().includes(searchValue.toLowerCase()))).map((Post:IPosts) => (
-        //   <Card key={Post.id} Post={Post} />
-        // ))
-        a()
-  }
+        renderCards()
+      }
     </>
     </UlHomePageStyled>
 

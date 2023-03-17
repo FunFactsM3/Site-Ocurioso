@@ -2,9 +2,13 @@ import React, { useContext, useState, useEffect } from "react";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
 import Axios from "../service/axios";
+
 import { Encrypt } from "../utils/Encryptor";
+
 import { ModalContext } from "./ModalContext";
+
 import { IChildren, IUserContext } from "./types/Context";
 import {  ILoginFormValues, IPosts, IRegisterFormValues } from "./types/Interface";
 
@@ -19,7 +23,6 @@ export const UserProviders = ({ children }: IChildren) => {
   const [ result, setResult ] = useState<IPosts[]>([]);
 
   const { setModalStateRegister,setModalStateLogin } = useContext(ModalContext)
-
 
   const navigate = useNavigate();
 
@@ -82,8 +85,6 @@ export const UserProviders = ({ children }: IChildren) => {
     localStorage.removeItem("@Favorits");
     navigate("/");
   };
-
-
 
   return (
     <UserContext.Provider

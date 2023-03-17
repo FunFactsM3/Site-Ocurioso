@@ -19,4 +19,3 @@ export const GlobalStyles = createGlobalStyle`
 
 `;
 
-//TODO: Add type declaration

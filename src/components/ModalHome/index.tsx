@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { DashContext } from "../../providers/DashContext";
-import { ModalContext } from "../../providers/ModalContext";
-import { IconHeart } from "../Buttons";
 
+import { ModalContext } from "../../providers/ModalContext";
 import { IMGModalHomePageStyled, StyledModalHome, WrapperStyles } from "./style";
 
 export const ModalHome = () => {
   const { openModalDash, setModalDash, Post } = useContext(ModalContext);
-  const { addPostToFavorit } = useContext(DashContext);
 
   if (openModalDash) {
     return (
@@ -23,7 +20,6 @@ export const ModalHome = () => {
           <p>{Post.content}</p>
           <div>
             <span>{Post.category}</span>
-            {/* <IconHeart Post={Post} /> */}
           </div>
         </>
       </StyledModalHome>

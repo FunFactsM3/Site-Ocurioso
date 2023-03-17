@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 
 export const Headerfavor = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);
+  const { setValueSelect, ValueSelect, LoadPostsdata, favoritPage } = useContext(DashContext);
+
   const { LoadPostsFavdata, setValueSelectFav, ValueSelectFav } =
     useContext(DashContext);
   const { userLogout } = useContext(UserContext);

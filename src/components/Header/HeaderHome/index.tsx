@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 
 export const HeaderHome = () => {
   const { menuOpen, setMenuOpen } = useContext(ModalContext);
-  const { setValueSelect, ValueSelect, LoadPostsdata, favoritPage } =
-  useContext(DashContext);
+  const { setValueSelect, ValueSelect, LoadPostsdata, favoritPage } = useContext(DashContext);
   const { userLogout } = useContext(UserContext);
   
   const handleMenuToggle = () => {

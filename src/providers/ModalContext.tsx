@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { createContext } from "react";
+
 import { IChildren, IModalContext } from "./types/Context";
 import { IPosts } from "./types/Interface";
-
 
 export const ModalContext = createContext({} as IModalContext);
 
@@ -14,7 +14,7 @@ export const ModalProviders = ({ children }: IChildren) => {
 
   const outsideRef = useRef(null);
   
-  const changeRegistrationModeForLogin = () => { setModalStateRegister(!isModalRegisterOpen); setModalStateLogin(!isModalLoginOpen);} //TODO: Inverta á logica.
+  const changeRegistrationModeForLogin = () => { setModalStateRegister(!isModalRegisterOpen); setModalStateLogin(!isModalLoginOpen);} 
 
   const toggleModalLogin = () => setModalStateLogin(!isModalLoginOpen);
   const toggleModalRegister = () => setModalStateRegister(!isModalRegisterOpen);
