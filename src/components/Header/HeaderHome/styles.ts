@@ -20,6 +20,7 @@ export const HeaderHomePageStyled = styled.header`
       box-shadow: 0 0 0 0;
       border: 0 none;
       outline: 0;
+      
   }
   button {
       color: #757575;
@@ -50,6 +51,8 @@ export const MiniContainer = styled.div`
   height: 100px;
 
   select{
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
+
     font-family: Montserrat, sans-serif;
     font-size: 18px;
   }
@@ -64,7 +67,7 @@ export const HamburguerDiv = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background: #FFFFFF;
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
     padding: 7px 7px;
     gap:5px;
     font-family: Montserrat, sans-serif;
@@ -73,42 +76,84 @@ export const HamburguerDiv = styled.div`
   }
   
     select {
-      color: #757575;
+      color:${({theme}) => theme.color.backgroudnColorTitle};
       border-radius: 10px;
       cursor: pointer;
       font-size: 13px;
     }
     a{
-      color: #757575;
+      color:${({theme}) => theme.color.backgroudnColorTitle};
       cursor: pointer;
       font-family: "Montserrat", sans-serif;
       font-size: 13px;
       padding-left:3px;
     }
     @media (min-width: 768px) {
+      display:none;
       nav {
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        background: #FFFFFF;
+        background-color: ${({theme}) => theme.color.backgroundColorModal};
         padding: 7px 7px;
         gap:5px;
-        font-family: Montserrat, sans-serif;
+        font-family: "Montserrat", sans-serif;
         width: 200px;
         height:100px;
     }
         select {
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
+          background-color:${({theme}) => theme.color.backgroundColorModal};
           border-radius: 10px;
           cursor: pointer;
+          font-family: "Montserrat", sans-serif;
           font-size: 18px;
         }
         a{
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
           cursor: pointer;
           font-family: "Montserrat", sans-serif;
           font-size: 18px;
           padding-left:3px;
         }
     }
+`
+
+export const HamburguerDesktop = styled.nav`
+  display: none;
+  flex-direction: row;
+  align-itens: center;
+
+  @media (min-width: 768px){
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: flex-start;
+    gap: 15px;
+
+
+    select {
+      color: white;
+      background: transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      height: 50%;
+      width: 115px;
+      option{
+        background-color: rgb(44, 35, 86);
+        padding-right:50px;
+      }
+    }
+    a{
+      color: white;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      padding-left:3px;
+      font-size:16px;
+    }
+  }
+
 `

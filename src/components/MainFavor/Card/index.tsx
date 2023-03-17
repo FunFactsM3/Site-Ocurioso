@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { DashContext } from "../../../providers/DashContext";
 import { ModalContext } from "../../../providers/ModalContext";
 import { IPosts } from "../../../providers/types/Interface";
+import { IconHeart } from "../../Buttons";
 import { CardHomePageStyled, IMGCardHomePageStyled } from "../../MainHome/Card/style";
 
 interface IPost2 {
@@ -27,11 +28,7 @@ export const Card = ({ Post }: IPost2) => {
           <p>{Post.description}</p>
           <div>
             <span>{Post.category}</span>
-            <img
-              src="https://i.imgur.com/0XFmm1w.png"
-              alt="coracao"
-              onClick={() => remPostToFavorites(Post)}
-            />
+            <IconHeart Post={Post} />
           </div>
         </section>
       </CardHomePageStyled>

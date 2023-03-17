@@ -1,9 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiFillAudio, AiOutlineArrowRight } from "react-icons/ai";
 import { BsFillRecordFill } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
-import { IButton } from "../../providers/types/Interface";
-import { ButtonLoginStyled, ButtonOpenStyled, ButtonCloseStyled, ButtonRegisterStyled, ButtonModalCloseStyled, ButtonRecord, ButtonSearch } from "./style";
+import { DashContext } from "../../providers/DashContext";
+import { IButton, IPosts } from "../../providers/types/Interface";
+import { ButtonLoginStyled, ButtonOpenStyled, ButtonCloseStyled, ButtonRegisterStyled, ButtonModalCloseStyled, ButtonRecord, ButtonSearch, ButtonRedHeart, ButtonBlackHeart } from "./style";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import usePersistedState from "../../utils/usePersistedState";
+
+type Post = {
+  Post:IPosts
+}
+
+export const IconHeart = ({Post}:Post) => {
+  const [ icon, setIcon] = usePersistedState(`${Post.id}`,false);
+
+  const { PostsFavorits, addPostToFavorit, remPostToFavorites } = useContext(DashContext)
+
+  const changeIcon = () => {
+    setIcon(!icon) 
+
+    const index = PostsFavorits.findIndex((val) => val.id === Post.id);
+
+    if(!icon && index < 0){
+      addPostToFavorit(Post)
+    } else {
+     setTimeout(()=>{remPostToFavorites(Post)},230)
+
+    }
+  }
+
+  return (
+    icon 
+    ? <ButtonRedHeart><AiFillHeart  onClick={()=>{changeIcon()}} /></ButtonRedHeart>
+    : <ButtonBlackHeart><AiOutlineHeart  onClick={changeIcon} /></ButtonBlackHeart>
+  )
+
+} 
 
 export const ButtonCloseModal = ({toglle, text}:IButton) => (
   <ButtonModalCloseStyled onClick={toglle} >{text}</ButtonModalCloseStyled>

@@ -13,15 +13,12 @@ export const UlHomePageStyled = styled.ul`
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 
-  margin: 0 0 0 1rem;
-
   @media (min-width: 769px) {
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;
 
-    width: 80%;
-
+    height: auto; width: 80%;
   }
 `;
 
@@ -31,22 +28,23 @@ export const StyledNull = styled.div`
     flex-direction: row;
     font-family: Montserrat, sans-serif;
     width: 100%;
-    background-color:  rgb(246, 245, 244);
+    background-color:${({theme}) => theme.color.backgroundColorModal};
     border-radius: 14px;
-    margin: 0 0 180px 0;
+    margin: 48px 16px;
     height: 90px;
+
     h1{
-      color: #444444;
+      color:${({theme}) => theme.color.backgroudnColorTitle};
       font-size: 15px;
       border-bottom: 1px;
     }
+
 @media (min-width: 768px){
     width: 80vw;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex-direction: row;
-    margin: 0 0 180px 0;
 }
 `
 export const StyledLine = styled.div`

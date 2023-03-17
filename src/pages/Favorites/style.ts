@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const FavoPageStyled = styled.div`
-  background: url("https://i.imgur.com/QwoYsmU.png") no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
+
+  background: url(https://i.imgur.com/QwoYsmU.png) center center / cover no-repeat fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    justify-content: space-between;
+    position: relative;
+    border: 10px solid red;
 `;

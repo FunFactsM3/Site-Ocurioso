@@ -15,7 +15,7 @@ export const CardHomePageStyled = styled.li`
 
   margin: 0 1rem 1rem 0;
   position: relative;
-
+  
   h3 {
     color: ${({theme}) => theme.color.backgroudnColorTitle};
 
@@ -28,6 +28,7 @@ export const CardHomePageStyled = styled.li`
   p {
     color: ${({theme}) => theme.color.backgroudnColorTitle};
     margin: 1rem 1rem 3rem 1rem;
+    text-align: justify;
   }
 
   div {
@@ -63,3 +64,12 @@ export const IMGCardHomePageStyled = styled.img`
   border-radius: 20px 20px 0 0;
   height: 200px;
 `;
+
+export const SpanStyled = styled.span`
+      color: #f6f5f4;
+      background-color: #82d74d;
+      padding: 5px 10px;
+      border-radius: 100px;
+      margin: 1rem 1rem 0 0;
+    
+`

@@ -56,6 +56,7 @@ export const MiniContainer = styled.div`
 `
 export const HamburguerDiv = styled.div`
   color: #F6F5F4;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -64,7 +65,7 @@ export const HamburguerDiv = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background: #FFFFFF;
+    background-color: ${({theme}) => theme.color.backgroundColorModal};
     padding: 7px 7px;
     gap:5px;
     font-family: Montserrat, sans-serif;
@@ -73,7 +74,7 @@ export const HamburguerDiv = styled.div`
   }
   
     select {
-      color: #757575;
+      background-color:${({theme}) => theme.color.backgroundColorModal};
       border-radius: 10px;
       cursor: pointer;
       font-size: 13px;
@@ -90,7 +91,7 @@ export const HamburguerDiv = styled.div`
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        background: #FFFFFF;
+        background-color: ${({theme}) => theme.color.backgroundColorModal};
         padding: 7px 7px;
         gap:5px;
         font-family: Montserrat, sans-serif;
@@ -98,13 +99,15 @@ export const HamburguerDiv = styled.div`
         height:100px;
     }
         select {
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
+          background-color:${({theme}) => theme.color.backgroundColorModal};
+
           border-radius: 10px;
           cursor: pointer;
           font-size: 18px;
         }
         a{
-          color: #757575;
+          color:${({theme}) => theme.color.backgroudnColorTitle};
           cursor: pointer;
           font-family: "Montserrat", sans-serif;
           font-size: 18px;

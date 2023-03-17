@@ -6,30 +6,25 @@ export const FooterHomePageStyled = styled.footer`
   justify-content: center;
   align-items: center;
   height: 122px;
-  /* margin: 10rem 0 0 0; */
+  width: 100%;
   background-color: #e0e0e0;
   font-family: "Montserrat", sans-serif;
   gap:10px;
 
+  position: absolute;
+    bottom: 0;
+
+  margin-top: 100px;
+
+ 
+ 
   p{
     font-size:14px;
-  }
-  @media (min-width: 1023px) {
-    margin: 7rem 0 0 0;
-  }
-
-  @media (min-width: 1300px) {
-    margin: 9rem 0 0 0;
-  } 
-
-   @media (min-width: 1400px) {
-    margin: 10rem 0 0 0;
   }
 `;
 
 export const FooterContainer = styled.div`
   border-bottom: 1px solid #FFFFFF;
-  margin-top:10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -43,6 +38,7 @@ export const FooterDiv = styled.div`
   width: 50%;
   gap:8px;
   margin-bottom:10px;
+    
   p {
     font-size:14px;
   }

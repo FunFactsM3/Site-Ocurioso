@@ -1,34 +1,44 @@
 import styled from "styled-components";
 
+export const WrapperStyles = styled.div`
+  width: 100%; height: 100%;
+  z-index:1;
+
+  position: absolute;
+  top: 0; left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:${({theme}) => theme.color.backgroundColorWrappper};
+`
 
 export const StyledModalHome = styled.div`
-  position: fixed;
-  top: 400px;
-  left: 50%;
   z-index:2;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 20px;
 
   background-color: ${({theme}) => theme.color.backgroundColorModal};
 
-  /* width: 600px;
-  max-width: 90%; */
   width: min(90%,500px);
-  height: 80%;
+  height: 90%;
 
   overflow-y: auto;
-
-  box-shadow: 0 0 20px 12px #6b52ab;
 
   font-family: "Montserrat", sans-serif;
   border-radius: 20px;
 
   @media screen and (min-width: 1000px) {
-    overflow-y: hidden;
+    overflow-y: auto;
     width: min(50%,650px);
-    height: auto;
+    height: 750px;
+
+    ::-webkit-scrollbar{
+      visibility: hidden;
+      width: 1%;
+    }
   }
 
-  
   button {
     position: absolute;
     right: 1rem;
@@ -52,9 +62,9 @@ export const StyledModalHome = styled.div`
 
   p {
     color:${({theme}) => theme.color.backgroudnColorTitle};
-    margin: 1rem 1rem 1rem 2rem;
+    margin: 1rem 2rem 1rem 2rem;
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
   }
 
   div {

@@ -24,8 +24,8 @@ export const LoginPageStyled = styled.div`
 
   @media screen and (min-width: 760px) {
     background: url("https://i.imgur.com/1OXBUyP.png") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
+    background-size: cover;
+    height: 100vh;
   }
 
   @media screen and (min-width: 1000px) {
