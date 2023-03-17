@@ -13,16 +13,12 @@ export const UlHomePageStyled = styled.ul`
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 
-  // margin: 0 0 0 1rem;
-
   @media (min-width: 769px) {
     flex-wrap: wrap;
     overflow: none;
     justify-content: center;
 
     height: auto; width: 80%;
-
-
   }
 `;
 

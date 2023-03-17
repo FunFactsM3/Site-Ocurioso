@@ -77,8 +77,6 @@ export const DashProviders = ({ children }: IChildren) => {
           (Post) => Post.category === data
         );
         setPostsFilterFav(filteredList);
-        console.log(PostsFavorits);
-        console.log(PostsFilterFav);
       }
     } else {
       if (data === "") {
@@ -127,7 +125,6 @@ export const DashProviders = ({ children }: IChildren) => {
 
   useEffect(() => {
     localStorage.setItem("@Favorits", JSON.stringify(PostsFavorits));
-    console.log(PostsFavorits);
     LoadPostsFavdata(`${ValueSelectFav.type}`);
   }, [PostsFavorits]);
 

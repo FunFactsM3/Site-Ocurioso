@@ -4,7 +4,6 @@ export const FavoPageStyled = styled.div`
 
   background: url(https://i.imgur.com/QwoYsmU.png) center center / cover no-repeat fixed;
     min-height: 100vh;
-    /* gap: 20px; */
     display: flex;
     flex-direction: column;
     overflow-y: auto;
